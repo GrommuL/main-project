@@ -1,5 +1,5 @@
 import { HeaderLinkButton, HeaderLogoLinkButton } from './ui'
-import { Button } from '@/components/ui/buttons'
+import { LinkButton } from '@/components/ui/buttons'
 
 export const Header = () => {
 	return (
@@ -13,7 +13,7 @@ export const Header = () => {
 							<HeaderLinkButton label='Найти задание' href='/' />
 						</div>
 					</div>
-					<Button label='Вход и регистрация' />
+					<LinkButton label='Вход и регистрация' href='/login' />
 				</div>
 			</div>
 		</header>
