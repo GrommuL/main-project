@@ -1,6 +1,7 @@
 import {
 	BestFreelancerSection,
-	FreelancerSearchSection
+	FreelancerSearchSection,
+	HowItWorksSection
 } from '@/components/screens'
 
 export const Home = () => {
@@ -8,6 +9,7 @@ export const Home = () => {
 		<main>
 			<FreelancerSearchSection />
 			<BestFreelancerSection />
+			<HowItWorksSection />
 		</main>
 	)
 }
