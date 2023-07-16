@@ -5,7 +5,7 @@ export const FreelancerSearchSection = () => {
 	return (
 		<section className='mt-[50px] mb-[100px]'>
 			<div className='container'>
-				<div className='px-[60px] pb-[50px] rounded-[24px] shadow-mainShadow flex items-center gap-[54px]'>
+				<div className='px-[60px] pb-[50px] rounded-[24px] shadow-shadowShape flex items-center gap-[54px]'>
 					<div className='flex flex-col gap-[24px] max-w-[526px]'>
 						<div className='flex flex-col gap-[24px]'>
 							<h1 className='font-bold text-[64px] leading-[110%]'>
