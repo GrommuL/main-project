@@ -1,11 +1,14 @@
 import { createBrowserRouter } from 'react-router-dom'
 import { Layout } from '@/components/layout'
-import { Home } from '@/pages/Home'
+import { SignUp, Home } from '@/pages'
 
 export const AppRouter = createBrowserRouter([
 	{
 		path: '/',
 		element: <Layout />,
-		children: [{ path: '', element: <Home /> }]
+		children: [
+			{ path: '', element: <Home /> },
+			{ path: 'register', element: <SignUp /> }
+		]
 	}
 ])
