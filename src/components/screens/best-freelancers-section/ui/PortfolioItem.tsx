@@ -11,7 +11,7 @@ type PortfolioItemProps = {
 
 export const PortfolioItem = () => {
 	return (
-		<div className='flex flex-col items-center gap-[24px] cursor-pointer'>
+		<div className='flex flex-col items-center gap-[24px] cursor-pointer pb-[24px]'>
 			<div className='flex flex-col items-center gap-[24px] max-w-[276px] w-full'>
 				<img
 					className='w-[276px] h-[180px] rounded-t-[16px]'
