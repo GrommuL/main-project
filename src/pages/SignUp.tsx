@@ -1,4 +1,5 @@
 import { Button, LinkButton } from '@/components/ui/buttons'
+import { AuthInput } from '@/components/ui/inputs'
 import { RegisterFields } from '@/types/RegisterFields'
 import { registerSchema } from '@/utils/schemas/registerSchema'
 import { zodResolver } from '@hookform/resolvers/zod'
@@ -60,81 +61,53 @@ export const SignUp = () => {
 					</div>
 				</div>
 				<div className='w-full flex flex-col gap-[10px]'>
-					<div className='flex flex-col gap-[8px] min-h-[100px]'>
-						<label className='text-[18px] leading-[24px] text-textSecondary'>
-							Имя
-						</label>
-						<input
-							{...register('firstName', { required: true })}
-							id='firstName'
-							className='w-full h-[48px] border border-borderColor rounded-[6px] focus:border-primary outline-none py-[11px] px-[15px] text-[18px] leading-[24px]'
-						/>
-						<p className='text-error text-[12px] leading-none'>
-							{errors.firstName?.message}
-						</p>
-					</div>
-					<div className='flex flex-col gap-[8px] min-h-[100px]'>
-						<label className='text-[18px] leading-[24px] text-textSecondary'>
-							Фамилия
-						</label>
-						<input
-							{...register('lastName')}
-							id='lastName'
-							className='w-full h-[48px] border border-borderColor rounded-[6px] focus:border-primary outline-none py-[11px] px-[15px] text-[18px] leading-[24px]'
-						/>
-						<p className='text-error text-[12px] leading-none'>
-							{errors.lastName?.message}
-						</p>
-					</div>
+					<AuthInput
+						label='Имя'
+						id='firstName'
+						register={register}
+						error={errors.firstName}
+						type='text'
+						required
+					/>
+					<AuthInput
+						label='Фамилия'
+						id='lastName'
+						register={register}
+						error={errors.lastName}
+						type='text'
+						required
+					/>
+					<AuthInput
+						label='Email'
+						id='email'
+						register={register}
+						error={errors.email}
+						type='email'
+						required
+					/>
 					<div className='flex flex-col gap-[8px]'>
-						<label className='text-[18px] leading-[24px] text-textSecondary'>
-							Email
-						</label>
-						<input
-							{...register('email')}
-							id='email'
-							type='email'
-							className='w-full h-[48px] border border-borderColor rounded-[6px] focus:border-primary outline-none py-[11px] px-[15px] text-[18px] leading-[24px]'
+						<AuthInput
+							label='Пароль'
+							id='password'
+							register={register}
+							error={errors.password}
+							type='password'
+							required
 						/>
-						<p className='text-error text-[12px] leading-none'>
-							{errors.email?.message}
-						</p>
-					</div>
-					<div className='flex flex-col gap-[8px]'>
-						<div className='flex flex-col gap-[8px]'>
-							<label className='text-[18px] leading-[24px] text-textSecondary'>
-								Пароль
-							</label>
-							<input
-								{...register('password')}
-								id='password'
-								type='password'
-								className='w-full h-[48px] border border-borderColor rounded-[6px] focus:border-primary outline-none py-[11px] px-[15px] text-[18px] leading-[24px]'
-							/>
-							<p className='text-error text-[12px] leading-none'>
-								{errors.password?.message}
-							</p>
-						</div>
 						<span className='w-full h-[4px] bg-borderColor'></span>
 						<div className='text-[14px] leading-[20px] text-textSecondary'>
 							Пароль должен содержать не менее 8 символов, заглавную букву,
 							цифры, один из символов (!$#%)
 						</div>
 					</div>
-					<div className='flex flex-col gap-[8px]'>
-						<label className='text-[18px] leading-[24px] text-textSecondary'>
-							Подтверждение пароля
-						</label>
-						<input
-							{...register('confirmPassword')}
-							id='confirmPassword'
-							type='password'
-							className='w-full h-[48px] border border-borderColor rounded-[6px] focus:border-primary outline-none py-[11px] px-[15px] text-[18px] leading-[24px]'
-						/>
-						<p className='text-error text-[12px] leading-none'>
-							{errors.confirmPassword?.message}
-						</p>
-					</div>
+					<AuthInput
+						label='Подтверждение пароля'
+						id='confirmPassword'
+						register={register}
+						error={errors.confirmPassword}
+						type='password'
+						required
+					/>
 					<div className='flex items-center gap-[8px]'>
 						<input
 							{...register('acceptTerms', { required: true })}
