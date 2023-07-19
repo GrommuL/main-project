@@ -5,17 +5,21 @@ export const registerSchema: ZodType<RegisterFields> = z
 	.object({
 		firstName: z
 			.string()
+			.nonempty('Введите Ваше имя')
 			.min(2, { message: 'Имя должно состоять минимум из двух символов' })
 			.max(50),
 		lastName: z
 			.string()
+			.nonempty('Введите Вашу фамилию')
 			.min(2, { message: 'Фамилия должна состоять минимум из двух символов' })
 			.max(50),
 		email: z
 			.string()
+			.nonempty('Введите Вашу почту')
 			.email('Неправильно введена почта. Пример почты: "example@expample.com"'),
 		password: z
 			.string()
+			.nonempty('Введите пароль')
 			.regex(
 				new RegExp('.*[A-Z].*'),
 				'Пароль должен содержать минимум одну заглавную букву'
@@ -30,7 +34,7 @@ export const registerSchema: ZodType<RegisterFields> = z
 			)
 			.min(8, { message: 'Минимальная длинна пароля должна быть 8 символов' })
 			.max(20),
-		confirmPassword: z.string(),
+		confirmPassword: z.string().nonempty('Введите пароль повторно'),
 		acceptTerms: z.literal(true),
 		accountRole: z.union([z.literal('customer'), z.literal('freelancer')])
 	})
