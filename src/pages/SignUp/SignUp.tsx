@@ -3,7 +3,6 @@ import { AuthInput } from '@/components/ui/inputs'
 import { RegisterFields } from '@/types/RegisterFields'
 import { registerSchema } from '@/utils/schemas/registerSchema'
 import { zodResolver } from '@hookform/resolvers/zod'
-import clsx from 'clsx'
 import { SubmitHandler, useForm } from 'react-hook-form'
 import {
 	AcceptTermsCheckbox,
@@ -26,8 +25,8 @@ export const SignUp = () => {
 	return (
 		<section className='py-[50px] flex items-center justify-center'>
 			<form
-				onSubmit={handleSubmit(onSubmit)}
 				className='flex flex-col items-center gap-[32px] py-[32px] px-[24px] rounded-[16px] shadow-dropdown w-[450px]'
+				onSubmit={handleSubmit(onSubmit)}
 			>
 				<div className='text-[25px] leading-[130%]'>Регистрация</div>
 				<AccountRoleCheckbox register={register} />
