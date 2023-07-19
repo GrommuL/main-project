@@ -16,7 +16,9 @@ export const AuthInput: FC<AuthInputProps> = ({
 	id,
 	required = false,
 	register,
-	error
+	error,
+	type = 'text',
+	disabled
 }) => {
 	return (
 		<div className='flex flex-col gap-[8px] min-h-[100px]'>
@@ -25,6 +27,8 @@ export const AuthInput: FC<AuthInputProps> = ({
 			</label>
 			<input
 				id={id}
+				type={type}
+				disabled={disabled}
 				{...register(id, { required: required })}
 				className='w-full h-[48px] border border-borderColor rounded-[6px] focus:border-primary outline-none py-[11px] px-[15px] text-[18px] leading-[24px]'
 			/>
