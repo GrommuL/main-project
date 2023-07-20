@@ -1,6 +1,6 @@
 import { Button, LinkButton } from '@/components/ui/buttons'
 import { AuthInput } from '@/components/ui/inputs'
-import { RegisterFields } from '@/types/RegisterFields'
+import { User } from '@/types/User'
 import { registerSchema } from '@/utils/schemas/registerSchema'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { SubmitHandler, useForm } from 'react-hook-form'
@@ -17,11 +17,11 @@ export const SignUp = () => {
 		register,
 		handleSubmit,
 		formState: { errors }
-	} = useForm<RegisterFields>({
+	} = useForm<User>({
 		resolver: zodResolver(registerSchema)
 	})
 
-	const onSubmit: SubmitHandler<RegisterFields> = async (userData) => {
+	const onSubmit: SubmitHandler<User> = async (userData) => {
 		await createUser(userData)
 	}
 	return (
