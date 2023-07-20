@@ -1,10 +1,18 @@
-import { User, UserInfo } from '@/types/User'
+import { User } from '@/types/User'
 import { instance } from '../axios/instance'
+import axios from 'axios'
 
 export const useSignIn = () => {
 	const loginUser = async (userData: User) => {
-		const { data }: UserInfo = await instance.post('login', userData)
-		console.log(data)
+		try {
+			const response = await instance.post('login', userData)
+		} catch (error) {
+			if (axios.isAxiosError(error)) {
+				console.log(error.response)
+			} else if (error instanceof Error) {
+				console.log(error.message)
+			}
+		}
 	}
 	return {
 		loginUser
