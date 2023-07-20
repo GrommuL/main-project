@@ -1,7 +1,7 @@
-import { RegisterFields } from '@/types/RegisterFields'
+import { User } from '@/types/User'
 import { ZodType, z } from 'zod'
 
-export const registerSchema: ZodType<RegisterFields> = z
+export const registerSchema: ZodType<User> = z
 	.object({
 		firstName: z
 			.string()
