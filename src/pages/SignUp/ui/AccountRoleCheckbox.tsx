@@ -1,9 +1,9 @@
 import { FC } from 'react'
 import { UseFormRegister } from 'react-hook-form'
-import { RegisterFields } from '@/types/RegisterFields'
+import { User } from '@/types/User'
 
 type AccountRoleCheckboxProps = {
-	register: UseFormRegister<RegisterFields>
+	register: UseFormRegister<User>
 }
 
 export const AccountRoleCheckbox: FC<AccountRoleCheckboxProps> = ({
