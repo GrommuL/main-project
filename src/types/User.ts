@@ -1,4 +1,4 @@
-export type RegisterFields = {
+export type User = {
 	firstName: string
 	lastName: string
 	email: string
@@ -9,3 +9,9 @@ export type RegisterFields = {
 }
 
 type AccountRoleType = 'customer' | 'freelancer'
+export type UserInfo = {
+	data: {
+		accessToken: string
+		user: User
+	}
+}
