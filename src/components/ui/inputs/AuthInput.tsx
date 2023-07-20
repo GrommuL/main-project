@@ -1,12 +1,12 @@
 import { FC } from 'react'
 import { FieldError, UseFormRegister } from 'react-hook-form'
 import { AuthIdType } from '@/types/AuthIdType'
-import { RegisterFields } from '@/types/RegisterFields'
+import { User } from '@/types/User'
 
 interface AuthInputProps extends React.InputHTMLAttributes<HTMLInputElement> {
 	label: string
 	id: AuthIdType
-	register: UseFormRegister<RegisterFields>
+	register: UseFormRegister<User>
 	error: FieldError | undefined
 	required: boolean
 }
