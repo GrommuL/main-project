@@ -1,18 +1,20 @@
 import { Button, LinkButton } from '@/components/ui/buttons'
 import { AuthInput } from '@/components/ui/inputs'
-import { RegisterFields } from '@/types/RegisterFields'
+import { User } from '@/types/User'
+import { useSignIn } from '@/utils/hooks/useSignIn'
 import { SubmitHandler, useForm } from 'react-hook-form'
 import { Link } from 'react-router-dom'
 
 export const SignIn = () => {
+	const { loginUser } = useSignIn()
 	const {
 		register,
 		handleSubmit,
 		formState: { errors }
-	} = useForm<RegisterFields>()
+	} = useForm<User>()
 
-	const onSubmit: SubmitHandler<RegisterFields> = (userData) => {
-		console.log(userData)
+	const onSubmit: SubmitHandler<User> = async (userData) => {
+		await loginUser(userData)
 	}
 
 	return (
