@@ -9,8 +9,10 @@ import {
 	AccountRoleCheckbox,
 	PasswordRuleNotification
 } from './ui'
+import { useSignUp } from '@/utils/hooks/useSignUp'
 
 export const SignUp = () => {
+	const { createUser } = useSignUp()
 	const {
 		register,
 		handleSubmit,
@@ -19,8 +21,8 @@ export const SignUp = () => {
 		resolver: zodResolver(registerSchema)
 	})
 
-	const onSubmit: SubmitHandler<RegisterFields> = (userData) => {
-		console.log(userData)
+	const onSubmit: SubmitHandler<RegisterFields> = async (userData) => {
+		await createUser(userData)
 	}
 	return (
 		<section className='py-[50px] flex items-center justify-center'>
