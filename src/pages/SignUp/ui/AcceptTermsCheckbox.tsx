@@ -1,10 +1,10 @@
 import { FC } from 'react'
 import { clsx } from 'clsx'
 import { FieldErrors, UseFormRegister } from 'react-hook-form'
-import { RegisterFields } from '@/types/RegisterFields'
+import { User } from '@/types/User'
 
 type AcceptTermsCheckboxProps = {
-	register: UseFormRegister<RegisterFields>
+	register: UseFormRegister<User>
 	errors: FieldErrors
 }
 
