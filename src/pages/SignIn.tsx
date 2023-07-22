@@ -28,7 +28,7 @@ export const SignIn = () => {
 				className='flex flex-col items-center gap-[32px] py-[32px] px-[24px] rounded-[16px] shadow-dropdown w-[450px]'
 				onSubmit={handleSubmit(onSubmit)}
 			>
-				<div className='flex flex-col gap-[10px] text-center min-h-[90px]'>
+				<div className='flex flex-col gap-[10px] text-center min-h-[65px]'>
 					<div className='text-[25px] leading-[130%]'>Авторизация</div>
 					{message && (
 						<p className='text-error max-w-[285px] break-words'>{message}</p>
