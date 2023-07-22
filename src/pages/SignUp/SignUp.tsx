@@ -18,7 +18,8 @@ export const SignUp = () => {
 		handleSubmit,
 		formState: { errors }
 	} = useForm<User>({
-		resolver: zodResolver(registerSchema)
+		resolver: zodResolver(registerSchema),
+		mode: 'onChange'
 	})
 
 	const onSubmit: SubmitHandler<User> = async (userData) => {
