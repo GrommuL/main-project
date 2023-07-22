@@ -2,16 +2,21 @@ import { Button, LinkButton } from '@/components/ui/buttons'
 import { AuthInput } from '@/components/ui/inputs'
 import { User } from '@/types/User'
 import { useSignIn } from '@/utils/hooks/useSignIn'
+import { loginSchema } from '@/utils/schemas/loginSchema'
+import { zodResolver } from '@hookform/resolvers/zod'
 import { SubmitHandler, useForm } from 'react-hook-form'
 import { Link } from 'react-router-dom'
 
 export const SignIn = () => {
-	const { loginUser } = useSignIn()
+	const { loginUser, message } = useSignIn()
 	const {
 		register,
 		handleSubmit,
 		formState: { errors }
-	} = useForm<User>()
+	} = useForm<User>({
+		resolver: zodResolver(loginSchema),
+		mode: 'onChange'
+	})
 
 	const onSubmit: SubmitHandler<User> = async (userData) => {
 		await loginUser(userData)
@@ -23,7 +28,12 @@ export const SignIn = () => {
 				className='flex flex-col items-center gap-[32px] py-[32px] px-[24px] rounded-[16px] shadow-dropdown w-[450px]'
 				onSubmit={handleSubmit(onSubmit)}
 			>
-				<div className='text-[25px] leading-[130%]'>Авторизация</div>
+				<div className='flex flex-col gap-[10px] text-center min-h-[90px]'>
+					<div className='text-[25px] leading-[130%]'>Авторизация</div>
+					{message && (
+						<p className='text-error max-w-[285px] break-words'>{message}</p>
+					)}
+				</div>
 				<div className='w-full flex flex-col gap-[20px]'>
 					<AuthInput
 						label='Email'
