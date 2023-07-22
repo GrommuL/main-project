@@ -8,12 +8,14 @@ export const useSignIn = () => {
 	const loginUser = async (userData: User) => {
 		try {
 			const response = await instance.post('login', userData)
+			if (response.status === 200) {
+				console.log(response)
+				setMessage('')
+			}
 		} catch (error) {
 			if (axios.isAxiosError(error)) {
 				if (error.response?.status === 400) {
-					setMessage(
-						'Такого пользователя не существует, неправильный email или пароль'
-					)
+					setMessage('Неправильный email или пароль')
 				}
 				console.log(error.response)
 			} else if (error instanceof Error) {
