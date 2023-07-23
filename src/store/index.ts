@@ -10,8 +10,11 @@ import {
 	REGISTER
 } from 'redux-persist'
 import storage from 'redux-persist/lib/storage'
+import authSlice from './reducers/authSlice'
 
-const rootReducer = combineReducers({})
+const rootReducer = combineReducers({
+	auth: authSlice
+})
 
 const persistConfig = {
 	key: 'root',
