@@ -30,9 +30,7 @@ export const SignIn = () => {
 			>
 				<div className='flex flex-col gap-[10px] text-center min-h-[65px]'>
 					<div className='text-[25px] leading-[130%]'>Авторизация</div>
-					{message && (
-						<p className='text-error max-w-[285px] break-words'>{message}</p>
-					)}
+					{message && <p className='text-error max-w-[285px]'>{message}</p>}
 				</div>
 				<div className='w-full flex flex-col gap-[20px]'>
 					<AuthInput
