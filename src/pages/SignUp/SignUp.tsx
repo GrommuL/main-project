@@ -10,9 +10,11 @@ import {
 	PasswordRuleNotification
 } from './ui'
 import { useSignUp } from '@/utils/hooks/useSignUp'
+import { useScrollToTop } from '@/utils/hooks/useScrollToTop'
 
 export const SignUp = () => {
 	const { createUser } = useSignUp()
+	const { goToTop } = useScrollToTop()
 	const {
 		register,
 		handleSubmit,
@@ -24,6 +26,7 @@ export const SignUp = () => {
 
 	const onSubmit: SubmitHandler<User> = async (userData) => {
 		await createUser(userData)
+		goToTop('instant')
 	}
 	return (
 		<section className='py-[50px] flex items-center justify-center'>
