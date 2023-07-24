@@ -1,6 +1,7 @@
 import { Button, LinkButton } from '@/components/ui/buttons'
 import { AuthInput } from '@/components/ui/inputs'
 import { User } from '@/types/User'
+import { useScrollToTop } from '@/utils/hooks/useScrollToTop'
 import { useSignIn } from '@/utils/hooks/useSignIn'
 import { loginSchema } from '@/utils/schemas/loginSchema'
 import { zodResolver } from '@hookform/resolvers/zod'
@@ -9,6 +10,7 @@ import { Link } from 'react-router-dom'
 
 export const SignIn = () => {
 	const { loginUser, message } = useSignIn()
+	const { goToTop } = useScrollToTop()
 	const {
 		register,
 		handleSubmit,
@@ -20,6 +22,7 @@ export const SignIn = () => {
 
 	const onSubmit: SubmitHandler<User> = async (userData) => {
 		await loginUser(userData)
+		goToTop('instant')
 	}
 
 	return (
