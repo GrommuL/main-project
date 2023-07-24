@@ -1,16 +1,25 @@
-import { User } from '@/types/User'
+import { User, UserInfo } from '@/types/User'
 import { instance } from '../axios/instance'
-import axios from 'axios'
+import axios, { AxiosResponse } from 'axios'
 import { useState } from 'react'
+import { useAppDispatch } from './redux'
+import { useNavigate } from 'react-router-dom'
+import { setUser } from '@/store/slices/authSlice'
 
 export const useSignIn = () => {
+	const dispatch = useAppDispatch()
+	const navigate = useNavigate()
 	const [message, setMessage] = useState('')
 	const loginUser = async (userData: User) => {
 		try {
-			const response = await instance.post('login', userData)
+			const response: AxiosResponse<UserInfo, UserInfo> = await instance.post(
+				'login',
+				userData
+			)
 			if (response.status === 200) {
-				console.log(response)
 				setMessage('')
+				dispatch(setUser(response.data))
+				navigate('/')
 			}
 		} catch (error) {
 			if (axios.isAxiosError(error)) {
