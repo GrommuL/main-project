@@ -1,4 +1,4 @@
-import { SearchIcon } from '@/components/ui/icons/SearchIcon'
+import { SearchIcon } from '@/components/ui/icons'
 
 export const FreelancerSearch = () => {
 	return (
