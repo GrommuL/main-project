@@ -1,9 +1,11 @@
 import { useAppSelector } from '@/utils/hooks/redux'
 import { HeaderLinkButton, HeaderLogoLinkButton } from './ui'
 import { LinkButton } from '@/components/ui/buttons'
+import { HeaderUserInformation } from './ui/HeaderUserInformation'
 
 export const Header = () => {
 	const accountRole = useAppSelector((state) => state.auth.user?.accountRole)
+	const accessToken = useAppSelector((state) => state.auth.accessToken)
 	return (
 		<header className='shadow-header'>
 			<div className='container'>
@@ -17,7 +19,11 @@ export const Header = () => {
 							<HeaderLinkButton label='Создать задание' href='/' />
 						)}
 					</div>
-					<LinkButton label='Вход и регистрация' href='/login' />
+					{accessToken ? (
+						<HeaderUserInformation />
+					) : (
+						<LinkButton label='Вход и регистрация' href='/login' />
+					)}
 				</div>
 			</div>
 		</header>
