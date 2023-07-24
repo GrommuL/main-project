@@ -10,8 +10,6 @@ export type User = {
 
 type AccountRoleType = 'customer' | 'freelancer'
 export type UserInfo = {
-	data: {
-		accessToken: string
-		user: User
-	}
+	accessToken: string
+	user: User | null
 }
