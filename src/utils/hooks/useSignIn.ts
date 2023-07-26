@@ -3,7 +3,7 @@ import { instance } from '../axios/instance'
 import axios, { AxiosResponse } from 'axios'
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { AuthService } from '@/services/auth'
+import { AuthService } from '@/services/AuthService'
 
 export const useSignIn = () => {
 	const { saveToStorage } = AuthService()
