@@ -18,7 +18,8 @@ export const useSignUp = () => {
 			password: userData.password,
 			acceptTerms: userData.acceptTerms,
 			accountRole: userData.accountRole,
-			createdAt: currentDate.getTime()
+			createdAt: currentDate.getTime(),
+			avatar: ''
 		}
 
 		try {
