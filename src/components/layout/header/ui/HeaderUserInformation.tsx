@@ -5,7 +5,7 @@ import { useAppDispatch, useAppSelector } from '@/utils/hooks/redux'
 import { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import Avatar from '@/assets/images/default-avatar.png'
-import { AuthService } from '@/services/auth'
+import { AuthService } from '@/services/AuthService'
 
 export const HeaderUserInformation = () => {
 	const { removeTokenFromStorage } = AuthService()
