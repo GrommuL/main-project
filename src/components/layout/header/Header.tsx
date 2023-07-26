@@ -5,7 +5,7 @@ import { HeaderUserInformation } from './ui/HeaderUserInformation'
 
 export const Header = () => {
 	const accountRole = useAppSelector((state) => state.auth.user?.accountRole)
-	const accessToken = useAppSelector((state) => state.auth.accessToken)
+	const user = useAppSelector((state) => state.auth.user)
 	return (
 		<header className='shadow-header'>
 			<div className='container'>
@@ -19,7 +19,7 @@ export const Header = () => {
 							<HeaderLinkButton label='Создать задание' href='/' />
 						)}
 					</div>
-					{accessToken ? (
+					{user ? (
 						<HeaderUserInformation />
 					) : (
 						<LinkButton label='Вход и регистрация' href='/login' />

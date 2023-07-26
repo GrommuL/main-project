@@ -5,13 +5,16 @@ import { useAppDispatch, useAppSelector } from '@/utils/hooks/redux'
 import { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import Avatar from '@/assets/images/default-avatar.png'
+import { AuthService } from '@/services/auth'
 
 export const HeaderUserInformation = () => {
+	const { removeTokenFromStorage } = AuthService()
 	const [isContextMenuOpen, setIsContextMenuOpen] = useState(false)
 	const contextMenu = useRef<HTMLDivElement>(null)
 	const userAvatar = useAppSelector((state) => state.auth.user?.avatar)
 	const dispatch = useAppDispatch()
 	const logOut = () => {
+		removeTokenFromStorage()
 		dispatch(logoutUser())
 	}
 	useEffect(() => {

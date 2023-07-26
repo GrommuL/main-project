@@ -1,8 +1,7 @@
-import { UserInfo } from '@/types/User'
+import { User, UserInfo } from '@/types/User'
 import { PayloadAction, createSlice } from '@reduxjs/toolkit'
 
-const initialState: UserInfo = {
-	accessToken: '',
+const initialState: Pick<UserInfo, 'user'> = {
 	user: null
 }
 
@@ -10,12 +9,10 @@ const authSlice = createSlice({
 	name: 'auth',
 	initialState,
 	reducers: {
-		setUser: (state, action: PayloadAction<UserInfo>) => {
-			state.accessToken = action.payload.accessToken
-			state.user = action.payload.user
+		setUser: (state, action: PayloadAction<User>) => {
+			state.user = action.payload
 		},
 		logoutUser: (state) => {
-			state.accessToken = ''
 			state.user = null
 		}
 	}

@@ -2,12 +2,11 @@ import { User, UserInfo } from '@/types/User'
 import { instance } from '../axios/instance'
 import axios, { AxiosResponse } from 'axios'
 import { useState } from 'react'
-import { useAppDispatch } from './redux'
 import { useNavigate } from 'react-router-dom'
-import { setUser } from '@/store/slices/authSlice'
+import { AuthService } from '@/services/auth'
 
 export const useSignIn = () => {
-	const dispatch = useAppDispatch()
+	const { saveToStorage } = AuthService()
 	const navigate = useNavigate()
 	const [message, setMessage] = useState('')
 	const loginUser = async (userData: User) => {
@@ -18,7 +17,7 @@ export const useSignIn = () => {
 			)
 			if (response.status === 200) {
 				setMessage('')
-				dispatch(setUser(response.data))
+				saveToStorage(response.data)
 				navigate('/')
 			}
 		} catch (error) {
