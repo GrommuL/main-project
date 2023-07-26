@@ -9,7 +9,7 @@ import Avatar from '@/assets/images/default-avatar.png'
 export const HeaderUserInformation = () => {
 	const [isContextMenuOpen, setIsContextMenuOpen] = useState(false)
 	const contextMenu = useRef<HTMLDivElement>(null)
-	// const userAvatar = useAppSelector((state) => state.auth.user)
+	const userAvatar = useAppSelector((state) => state.auth.user?.avatar)
 	const dispatch = useAppDispatch()
 	const logOut = () => {
 		dispatch(logoutUser())
@@ -38,7 +38,7 @@ export const HeaderUserInformation = () => {
 						className='w-[32px] h-[32px] rounded-full flex items-center justify-center overflow-hidden'
 						onClick={() => setIsContextMenuOpen((prev) => !prev)}
 					>
-						<img src={Avatar} alt='avatar' />
+						<img src={userAvatar ? userAvatar : Avatar} alt='avatar' />
 					</button>
 					{isContextMenuOpen && (
 						<div className='absolute top-[50px] -left-[30px] flex flex-col items-start p-[16px] rounded-[16px] bg-white border border-borderColor shadow-header'>
