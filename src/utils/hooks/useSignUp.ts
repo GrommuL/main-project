@@ -1,12 +1,11 @@
 import { User, UserInfo } from '@/types/User'
 import { instance } from '../axios/instance'
-import { useAppDispatch } from './redux'
-import { setUser } from '@/store/slices/authSlice'
 import { useNavigate } from 'react-router-dom'
 import axios, { AxiosResponse } from 'axios'
+import { AuthService } from '@/services/auth'
 
 export const useSignUp = () => {
-	const dispatch = useAppDispatch()
+	const { saveToStorage } = AuthService()
 	const navigate = useNavigate()
 
 	const createUser = async (userData: User) => {
@@ -28,7 +27,7 @@ export const useSignUp = () => {
 				user
 			)
 			if (response.data) {
-				dispatch(setUser(response.data))
+				saveToStorage(response?.data)
 				navigate('/')
 			}
 		} catch (error) {
