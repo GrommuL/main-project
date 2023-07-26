@@ -27,7 +27,7 @@ export const useSignUp = () => {
 				user
 			)
 			if (response.data) {
-				saveToStorage(response?.data)
+				saveToStorage(response.data)
 				navigate('/')
 			}
 		} catch (error) {
