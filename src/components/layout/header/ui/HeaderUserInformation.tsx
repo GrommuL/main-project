@@ -4,7 +4,7 @@ import { NotificationIcon, ConversationIcon } from '@/components/ui/icons'
 import { useAppDispatch, useAppSelector } from '@/utils/hooks/redux'
 import { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
-import Avatar from '@/assets/images/default-avatar.png'
+import Avatar from '@/assets/images/default-avatar.jpg'
 import { AuthService } from '@/services/AuthService'
 
 export const HeaderUserInformation = () => {
