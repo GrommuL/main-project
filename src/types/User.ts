@@ -11,7 +11,12 @@ export type User = {
 }
 
 type AccountRoleType = 'customer' | 'freelancer'
+
 export type UserInfo = {
 	accessToken: string
+	user: User | null
+}
+export type AuthUser = {
+	isAuth: boolean
 	user: User | null
 }
