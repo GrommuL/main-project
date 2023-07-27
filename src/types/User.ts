@@ -3,6 +3,7 @@ export type User = {
 	lastName: string
 	email: string
 	avatar: string
+	about: string
 	password: string
 	confirmPassword: string
 	acceptTerms: boolean
