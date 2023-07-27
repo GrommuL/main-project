@@ -1,8 +1,9 @@
-import { User, UserInfo } from '@/types/User'
+import { AuthUser, User } from '@/types/User'
 import { PayloadAction, createSlice } from '@reduxjs/toolkit'
 
-const initialState: Pick<UserInfo, 'user'> = {
-	user: null
+const initialState: AuthUser = {
+	user: null,
+	isAuth: false
 }
 
 const authSlice = createSlice({
@@ -11,9 +12,11 @@ const authSlice = createSlice({
 	reducers: {
 		setUser: (state, action: PayloadAction<User>) => {
 			state.user = action.payload
+			state.isAuth = true
 		},
 		logoutUser: (state) => {
 			state.user = null
+			state.isAuth = false
 		}
 	}
 })
