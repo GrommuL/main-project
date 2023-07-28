@@ -3,7 +3,7 @@ import MainImage from '@/assets/images/home/main-img.png'
 
 export const FreelancerSearchSection = () => {
 	return (
-		<section className='mt-[50px] mb-[100px]'>
+		<section className='mt-[50px] mb-[100px] min-h-full'>
 			<div className='container'>
 				<div className='px-[60px] pb-[50px] rounded-[24px] shadow-shadowShape flex items-center gap-[54px]'>
 					<div className='flex flex-col gap-[24px] max-w-[526px]'>
@@ -17,7 +17,11 @@ export const FreelancerSearchSection = () => {
 						</div>
 						<FreelancerSearch />
 					</div>
-					<img src={MainImage} alt='MainImage' />
+					<img
+						className='min-w-[500px] min-h-[500px] w-full h-full'
+						src={MainImage}
+						alt='MainImage'
+					/>
 				</div>
 			</div>
 		</section>
