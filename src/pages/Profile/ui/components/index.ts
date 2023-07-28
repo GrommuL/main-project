@@ -1,0 +1,6 @@
+export { ProfileAvatar } from './ProfileAvatar'
+export { ProfileUserInformation } from './ProfileUserInformation'
+export { ProfileTaskCreateInterface } from './ProfileTaskCreateInterface'
+export { ProfileGeneralSettingsTab } from './ProfileGeneralSettingsTab'
+export { ProfileUserAbout } from './ProfileUserAbout'
+export { ProfileEditUserInformation } from './ProfileEditUserInformation'
