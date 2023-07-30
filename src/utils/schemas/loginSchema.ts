@@ -1,6 +1,7 @@
-import { z } from 'zod'
+import { User } from '@/types/User'
+import { ZodType, z } from 'zod'
 
-export const loginSchema = z.object({
+export const loginSchema: ZodType<Pick<User, 'email' | 'password'>> = z.object({
 	email: z
 		.string()
 		.nonempty('Введите Вашу почту')
