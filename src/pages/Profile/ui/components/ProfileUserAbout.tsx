@@ -9,7 +9,7 @@ export const ProfileUserAbout = () => {
 				<span className='font-semibold text-[25px] leading-[32px] text-textPrimary'>
 					Обо мне
 				</span>
-				<button className='w-[44px] h-[44px] rounded-full bg-primary flex items-center justify-center'>
+				<button className='w-[44px] h-[44px] rounded-full bg-bgSecondary flex items-center justify-center'>
 					<PencilIcon />
 				</button>
 			</div>
