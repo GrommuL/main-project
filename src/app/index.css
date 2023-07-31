@@ -23,3 +23,22 @@
 		@apply max-w-[1230px];
 	}
 }
+
+/* SCROLLBAR */
+
+::-webkit-scrollbar {
+	width: 6px;
+}
+
+::-webkit-scrollbar-track {
+	background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+	background: #465efd;
+	border-radius: 150px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: #005bd1;
+}
