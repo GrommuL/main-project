@@ -10,7 +10,7 @@ export type User = {
 	accountRole: AccountRoleType
 }
 
-type AccountRoleType = 'customer' | 'freelancer'
+export type AccountRoleType = 'customer' | 'freelancer'
 
 export type UserInfo = {
 	accessToken: string
