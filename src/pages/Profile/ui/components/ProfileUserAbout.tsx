@@ -2,6 +2,7 @@ import { PencilIcon } from '@/components/ui/icons'
 import { Modal } from '@/components/ui/modals'
 import { useAppSelector } from '@/utils/hooks/redux'
 import { useModal } from '@/utils/hooks/useModal'
+import { ProfileAboutEdit } from './ProfileAboutEdit'
 
 export const ProfileUserAbout = () => {
 	const currentUser = useAppSelector((state) => state.auth?.user)
@@ -22,7 +23,11 @@ export const ProfileUserAbout = () => {
 			<div className='pt-[24px] border-t border-t-borderColor'>
 				{currentUser?.about ? currentUser?.about : 'Добавьте информацию о себе'}
 			</div>
-			<Modal isOpen={isOpen} onClick={handleCloseModal} />
+			<Modal
+				isOpen={isOpen}
+				onClick={handleCloseModal}
+				body={<ProfileAboutEdit />}
+			/>
 		</div>
 	)
 }
