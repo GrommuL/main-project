@@ -3,6 +3,7 @@ import { PencilIcon } from '@/components/ui/icons'
 import { Modal } from '@/components/ui/modals'
 import { useAppSelector } from '@/utils/hooks/redux'
 import { useModal } from '@/utils/hooks/useModal'
+import { ProfileUploadAvatar } from './ProfileUploadAvatar'
 
 export const ProfileAvatar = () => {
 	const userAvatar = useAppSelector((state) => state.auth.user?.avatar)
@@ -20,7 +21,11 @@ export const ProfileAvatar = () => {
 			>
 				<PencilIcon stroke='#FFFFFF' />
 			</button>
-			<Modal isOpen={isOpen} onClick={handleCloseModal} />
+			<Modal
+				isOpen={isOpen}
+				onClick={handleCloseModal}
+				body={<ProfileUploadAvatar />}
+			/>
 		</div>
 	)
 }
