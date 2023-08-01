@@ -16,7 +16,7 @@ export const ProfileAboutEdit = () => {
 				rows={10}
 				placeholder='Введите текст'
 			/>
-			<Button label='Отправить' className='w-[200px]' />
+			<Button label='Сохранить' className='w-[200px]' />
 		</form>
 	)
 }
