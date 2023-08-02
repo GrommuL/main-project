@@ -1,4 +1,4 @@
-import { PortfolioItem } from '@/components/PortfolioItem'
+import { BestFreelancerPortfolioItem } from './ui'
 
 export const BestFreelancerSection = () => {
 	return (
@@ -9,14 +9,14 @@ export const BestFreelancerSection = () => {
 						Наши лучшие исполнители
 					</h2>
 					<div className='flex items-center justify-center gap-[32px] flex-wrap'>
-						<PortfolioItem />
-						<PortfolioItem />
-						<PortfolioItem />
-						<PortfolioItem />
-						<PortfolioItem />
-						<PortfolioItem />
-						<PortfolioItem />
-						<PortfolioItem />
+						<BestFreelancerPortfolioItem />
+						<BestFreelancerPortfolioItem />
+						<BestFreelancerPortfolioItem />
+						<BestFreelancerPortfolioItem />
+						<BestFreelancerPortfolioItem />
+						<BestFreelancerPortfolioItem />
+						<BestFreelancerPortfolioItem />
+						<BestFreelancerPortfolioItem />
 					</div>
 				</div>
 			</div>
