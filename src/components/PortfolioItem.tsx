@@ -1,6 +1,7 @@
 import { LinkButton } from '@/components/ui/buttons'
 import image from '/image.jpg'
 import avatar from '/avatar.jpg'
+import { BriefcaseIcon } from './ui/icons'
 
 type PortfolioItemProps = {
 	name: string
@@ -12,7 +13,10 @@ type PortfolioItemProps = {
 export const PortfolioItem = () => {
 	return (
 		<div className='flex flex-col items-center gap-[24px] cursor-pointer pb-[24px]'>
-			<div className='flex flex-col items-center gap-[24px] max-w-[276px] w-full'>
+			<div className='flex flex-col items-center gap-[24px] max-w-[276px] w-full relative'>
+				<button className='absolute top-[16px] left-[16px] w-[44px] h-[44px] rounded-full bg-primary flex items-center justify-center hover:bg-primaryHover'>
+					<BriefcaseIcon />
+				</button>
 				<img
 					className='w-[276px] h-[180px] rounded-t-[16px]'
 					src={image}
