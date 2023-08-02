@@ -44,17 +44,17 @@ export const HeaderUserInformation = () => {
 						<img src={userAvatar ? userAvatar : Avatar} alt='avatar' />
 					</button>
 					{isContextMenuOpen && (
-						<div className='absolute top-[50px] -left-[30px] flex flex-col items-start p-[16px] rounded-[16px] bg-white border border-borderColor shadow-header'>
-							<span className='absolute -top-[10px] left-[36px] bg-white w-5 h-5 border-b-[1px] border-b-borderColor border-r-[1px] border-r-transparent border-l-[1px] border-l-borderColor rotate-[135deg]'></span>
+						<div className='absolute top-[50px] right-[0px] flex flex-col items-start w-[240px] p-[6px] rounded-[8px] bg-white border border-borderColor shadow-header'>
+							{/* <span className='absolute -top-[6px] right-[5px] bg-white w-[10px] h-[10px] border-b-[1px] border-b-borderColor border-r-[1px] border-r-transparent border-l-[1px] border-l-borderColor rotate-[135deg]'></span> */}
 							<Link
-								className='text-[14px] hover:text-primary'
+								className='text-[14px] rounded-[8px] hover:bg-bgTertiary py-[9px] px-[12px] w-full text-left transition'
 								to='/profile'
 								onClick={() => setIsContextMenuOpen(false)}
 							>
 								Профиль
 							</Link>
 							<button
-								className='text-[14px] hover:text-primary'
+								className='text-[14px] rounded-[8px] hover:bg-bgTertiary py-[9px] px-[12px] w-full text-left transition'
 								onClick={logOut}
 							>
 								Выйти
