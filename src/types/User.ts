@@ -23,6 +23,7 @@ export type AuthUser = {
 	user: User | null
 }
 export type UserPortfolio = {
+	id: string
 	label: string
 	image: string
 }
