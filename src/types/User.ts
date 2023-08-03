@@ -8,6 +8,7 @@ export type User = {
 	confirmPassword: string
 	acceptTerms: boolean
 	accountRole: AccountRoleType
+	portfolio?: UserPortfolio[]
 }
 
 export type AccountRoleType = 'customer' | 'freelancer'
@@ -19,4 +20,8 @@ export type UserInfo = {
 export type AuthUser = {
 	isAuth: boolean
 	user: User | null
+}
+export type UserPortfolio = {
+	label: string
+	image: string
 }
