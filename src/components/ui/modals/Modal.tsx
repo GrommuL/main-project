@@ -13,7 +13,7 @@ export const Modal: FC<ModalProps> = ({ children, body, isOpen, onClick }) => {
 	return (
 		<div
 			className={clsx(
-				'fixed overflow-hidden w-full h-full bg-overlay top-0 left-0 flex items-center justify-center',
+				'fixed overflow-hidden w-full h-full bg-overlay top-0 left-0 flex items-center justify-center z-[999]',
 				!isOpen && 'hidden'
 			)}
 		>
