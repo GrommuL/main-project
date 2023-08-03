@@ -1,33 +1,3 @@
 {
-	"users": [
-		{
-			"email": "johnsnow@netowork.ru",
-			"password": "$2a$10$pDkm/ojxrUcYwa85SF4fi.Zeb67WZBsEucYtynxirmn3od681r7mS",
-			"firstName": "John",
-			"lastName": "Snow",
-			"acceptTerms": true,
-			"accountRole": "customer",
-			"id": 1
-		},
-		{
-			"email": "smith@netowork.ru",
-			"password": "$2a$10$/hsQutbOrX3/Cn62z9ZcxeL7b1s1IE45BcV3rlEIFznag.pl9meIu",
-			"firstName": "John",
-			"lastName": "Smith",
-			"acceptTerms": true,
-			"accountRole": "freelancer",
-			"createdAt": 1689842812123,
-			"id": 2
-		},
-		{
-			"email": "stark@netowork.ru",
-			"password": "$2a$10$887HDRa61H5NEPPTEhlCVu.7IUpO0SazruDGjm7cdS56armh1nTRe",
-			"firstName": "Rob",
-			"lastName": "Stark",
-			"acceptTerms": true,
-			"accountRole": "customer",
-			"createdAt": 1690186255297,
-			"id": 3
-		}
-	]
+	"users": []
 }
