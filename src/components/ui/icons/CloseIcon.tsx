@@ -10,9 +10,9 @@ export const CloseIcon = () => {
 			<path
 				d='M6.75781 17.2428L12.0008 11.9998M17.2438 6.75684L11.9998 11.9998M11.9998 11.9998L6.75781 6.75684M12.0008 11.9998L17.2438 17.2428'
 				stroke='#BFC1C7'
-				stroke-width='1.5'
-				stroke-linecap='round'
-				stroke-linejoin='round'
+				strokeWidth='1.5'
+				strokeLinecap='round'
+				strokeLinejoin='round'
 			/>
 		</svg>
 	)
