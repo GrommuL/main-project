@@ -19,7 +19,8 @@ export const useSignUp = () => {
 			accountRole: userData.accountRole,
 			createdAt: currentDate.getTime(),
 			avatar: '',
-			about: ''
+			about: '',
+			portfolio: []
 		}
 
 		try {
