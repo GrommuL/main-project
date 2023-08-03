@@ -26,7 +26,7 @@ export const ProfileUserAbout = () => {
 			<Modal
 				isOpen={isOpen}
 				onClick={handleCloseModal}
-				body={<ProfileAboutEdit />}
+				body={<ProfileAboutEdit onClick={handleCloseModal} />}
 			/>
 		</div>
 	)
