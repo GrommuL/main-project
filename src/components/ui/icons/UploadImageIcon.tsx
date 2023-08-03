@@ -7,7 +7,7 @@ export const UploadImageIcon = () => {
 			fill='none'
 			xmlns='http://www.w3.org/2000/svg'
 		>
-			<g clip-path='url(#clip0_7865_46752)'>
+			<g clipPath='url(#clip0_7865_46752)'>
 				<rect width='48' height='48' rx='24' fill='#465EFD' />
 				<path
 					opacity='0.2'
