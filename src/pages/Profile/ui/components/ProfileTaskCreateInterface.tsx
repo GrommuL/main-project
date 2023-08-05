@@ -10,7 +10,7 @@ export const ProfileTaskCreateInterface = () => {
 					<span className='text-[18px]'>
 						Создать задание для выполнения заказа
 					</span>
-					<LinkButton label='Создать задание' href='/' />
+					<LinkButton label='Создать задание' href='/create-task' />
 				</>
 			)}
 			{currentUser?.accountRole === 'freelancer' && (
