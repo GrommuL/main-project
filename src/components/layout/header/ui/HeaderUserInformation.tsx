@@ -38,10 +38,14 @@ export const HeaderUserInformation = () => {
 				</div>
 				<div ref={contextMenu} className='relative'>
 					<button
-						className='w-[32px] h-[32px] rounded-full flex items-center justify-center overflow-hidden'
+						className='w-[32px] h-[32px] rounded-full flex items-center justify-center overflow-hidden object-cover'
 						onClick={() => setIsContextMenuOpen((prev) => !prev)}
 					>
-						<img src={userAvatar ? userAvatar : Avatar} alt='avatar' />
+						<img
+							className='w-full h-full'
+							src={userAvatar ? userAvatar : Avatar}
+							alt='avatar'
+						/>
 					</button>
 					{isContextMenuOpen && (
 						<div className='absolute top-[50px] right-[0px] flex flex-col items-start w-[240px] p-[6px] rounded-[8px] bg-white border border-borderColor shadow-header'>
