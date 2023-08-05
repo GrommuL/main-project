@@ -11,6 +11,13 @@ enum TASK {
 
 export const CreateTask = () => {
 	const [step, setStep] = useState(TASK.TITLE)
+
+	const onNext = () => {
+		setStep((value) => value + 1)
+	}
+	const onBack = () => {
+		setStep((value) => value - 1)
+	}
 	return (
 		<main className='py-[50px] flex flex-col gap-[40px] items-center justify-center'>
 			<h2 className='text-[48px] leading-[57px] font-bold max-w-[721px] text-center'>
@@ -38,7 +45,21 @@ export const CreateTask = () => {
 					Что нужно сделать?
 				</h3>
 				<ProfileInput label='Название задания' />
-				<Button label='Далее' type='button' className='w-full' />
+				<div className='w-full flex items-center gap-[10px]'>
+					{step > 0 && (
+						<Button
+							label='Назад'
+							type='button'
+							variant='outline'
+							onClick={onBack}
+						/>
+					)}
+					{step === TASK.PRICE ? (
+						<Button label='Создать' type='submit' />
+					) : (
+						<Button label='Далее' type='button' onClick={onNext} />
+					)}
+				</div>
 			</form>
 		</main>
 	)

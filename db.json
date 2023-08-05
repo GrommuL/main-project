@@ -1,3 +1,41 @@
 {
-	"users": []
+	"users": [
+		{
+			"email": "johnsnow@netowork.ru",
+			"password": "$2a$10$Alg1NnFusx8EQqE5bKBnNuAhENM0tvpB86x6OZl6jAxW7PblhlGQ2",
+			"firstName": "John",
+			"lastName": "Snow",
+			"acceptTerms": true,
+			"accountRole": "freelancer",
+			"createdAt": 1691051521803,
+			"avatar": "",
+			"about": "Стэк: Marvel, Miro, Figma, Principle. (использую также Sketch, Illustrator)",
+			"portfolio": [
+				{
+					"id": "1",
+					"label": "Создание изображений",
+					"image": "https://www.powertrafic.fr/wp-content/uploads/2023/04/image-ia-exemple.png"
+				},
+				{
+					"id": "2",
+					"label": "Создание изображений, логотипов, дизайна",
+					"image": "https://www.freecodecamp.org/news/content/images/size/w2000/2022/09/jonatan-pie-3l3RwQdHRHg-unsplash.jpg"
+				}
+			],
+			"id": 1
+		},
+		{
+			"email": "smith@netowork.ru",
+			"password": "$2a$10$iyNVDrJCYrz0h2MG1nOQnewckVlVOQWq27GYviRNhSs3R08DeXgz6",
+			"firstName": "John",
+			"lastName": "Smith",
+			"acceptTerms": true,
+			"accountRole": "customer",
+			"createdAt": 1691214657308,
+			"avatar": "https://media.sproutsocial.com/uploads/2022/06/profile-picture.jpeg",
+			"about": "",
+			"portfolio": [],
+			"id": 2
+		}
+	]
 }
