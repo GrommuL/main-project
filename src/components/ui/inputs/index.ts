@@ -1,2 +1,2 @@
 export { AuthInput } from './AuthInput'
-export { ProfileInput } from './ProfileInput'
+export { TaskInput } from './TaskInput'
