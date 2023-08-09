@@ -16,7 +16,7 @@ export const Header = () => {
 							<HeaderLinkButton label='Найти задание' href='/' />
 						)}
 						{accountRole === 'customer' && (
-							<HeaderLinkButton label='Создать задание' href='/' />
+							<HeaderLinkButton label='Создать задание' href='/create-task' />
 						)}
 					</div>
 					{user ? (
