@@ -3,6 +3,7 @@ import { ZodType, z } from 'zod'
 
 export const registerSchema: ZodType<User> = z
 	.object({
+		id: z.number().optional(),
 		firstName: z
 			.string()
 			.nonempty('Введите Ваше имя')
