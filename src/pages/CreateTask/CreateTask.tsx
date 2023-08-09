@@ -18,11 +18,7 @@ export const CreateTask = () => {
 		register,
 		handleSubmit,
 		formState: { errors }
-	} = useForm<Task>({
-		defaultValues: {
-			taskName: ''
-		}
-	})
+	} = useForm<Task>()
 
 	const onNext = () => {
 		setStep((value) => value + 1)
@@ -63,38 +59,51 @@ export const CreateTask = () => {
 						)}
 					/>
 				</div>
-				<h3 className='text-[25px] leading-[32px] font-semibold'>
-					Что нужно сделать?
-				</h3>
 				{step === TASK.TITLE && (
-					<TaskInput
-						id='taskName'
-						register={register}
-						error={errors?.taskName}
-						required
-						label='Название задания'
-					/>
+					<>
+						<h3 className='text-[25px] leading-[32px] font-semibold'>
+							Что нужно сделать?
+						</h3>
+						<TaskInput
+							id='taskName'
+							register={register}
+							error={errors?.taskName}
+							required
+							label='Название задания'
+						/>
+					</>
 				)}
 				{step === TASK.DESCRIPTION && (
-					<textarea
-						{...register('taskInformation')}
-						className='border border-borderColor rounded-[16px] p-[12px] outline-none hover:border-primaryHover focus:border-primary'
-						name='taskInformation'
-						id='taskInformation'
-						cols={46}
-						rows={10}
-						placeholder='Уточнить детали'
-					/>
+					<>
+						<h3 className='text-[25px] leading-[32px] font-semibold'>
+							Уточнить детали
+						</h3>
+						<textarea
+							{...register('taskInformation')}
+							className='border border-borderColor rounded-[16px] p-[12px] outline-none hover:border-primaryHover focus:border-primary'
+							name='taskInformation'
+							id='taskInformation'
+							cols={46}
+							rows={10}
+							placeholder='Описание'
+						/>
+					</>
 				)}
 				{step === TASK.PRICE && (
-					<TaskInput
-						id='price'
-						register={register}
-						error={errors?.price}
-						required
-						label='На какой бюджет вы расчитываете'
-						type='number'
-					/>
+					<>
+						<h3 className='text-[25px] leading-[32px] font-semibold'>
+							На какой бюджет вы рассчитываете?
+						</h3>
+						<TaskInput
+							id='price'
+							register={register}
+							error={errors?.price}
+							required
+							label='Стоимость'
+							type='number'
+							placeholder='0.00'
+						/>
+					</>
 				)}
 				<div className='w-full flex items-center gap-[10px]'>
 					{step > 0 && (
