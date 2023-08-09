@@ -2,8 +2,8 @@ import { Button } from '@/components/ui/buttons'
 import { TaskInput } from '@/components/ui/inputs'
 import { useState } from 'react'
 import { SubmitHandler, useForm } from 'react-hook-form'
-import clsx from 'clsx'
 import { Task } from '@/types/Task'
+import clsx from 'clsx'
 
 enum TASK {
 	TITLE = 0,
