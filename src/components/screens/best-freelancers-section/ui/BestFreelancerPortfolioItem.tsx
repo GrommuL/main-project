@@ -1,16 +1,16 @@
 import { LinkButton } from '@/components/ui/buttons'
-import image from '/image.jpg'
-import avatar from '/avatar.jpg'
+import Avatar from '@/assets/images/default-avatar.jpg'
 import { BriefcaseIcon } from '../../../ui/icons'
+import { User } from '@/types/User'
+import { FC } from 'react'
 
 type PortfolioItemProps = {
-	name: string
-	id: string
-	portfolio: string[]
-	avatar: string
+	user: User
 }
 
-export const BestFreelancerPortfolioItem = () => {
+export const BestFreelancerPortfolioItem: FC<PortfolioItemProps> = ({
+	user
+}) => {
 	return (
 		<div className='flex flex-col items-center gap-[24px] cursor-pointer pb-[24px]'>
 			<div className='flex flex-col items-center gap-[24px] max-w-[276px] w-full relative'>
@@ -18,18 +18,18 @@ export const BestFreelancerPortfolioItem = () => {
 					<BriefcaseIcon />
 				</button>
 				<img
-					className='w-[276px] h-[180px] rounded-t-[16px]'
-					src={image}
+					className='w-[276px] h-[180px] rounded-t-[16px] object-cover'
+					src={user.portfolio && user.portfolio[0].image}
 					alt='Portfolio'
 				/>
 				<div className='flex items-center gap-[8px]'>
 					<img
-						className='w-[32px] h-[32px] border border-primary rounded-full'
-						src={avatar}
+						className='w-[32px] h-[32px] border border-primary rounded-full object-cover'
+						src={user.avatar?.length ? user.avatar : Avatar}
 						alt='Avatar'
 					/>
 					<div className='font-semibold text-[20px] leading-[130%]'>
-						{'Никита Фролов'}
+						{`${user.firstName} ${user.lastName}`}
 					</div>
 				</div>
 			</div>
