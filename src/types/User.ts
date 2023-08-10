@@ -27,3 +27,7 @@ export type UserPortfolio = {
 	label: string
 	image: string
 }
+
+export type Users = {
+	users: User[]
+}
