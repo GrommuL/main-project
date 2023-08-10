@@ -38,11 +38,11 @@ export const HeaderUserInformation = () => {
 				</div>
 				<div ref={contextMenu} className='relative'>
 					<button
-						className='w-[32px] h-[32px] rounded-full flex items-center justify-center overflow-hidden object-cover'
+						className='w-[32px] h-[32px] rounded-full flex items-center justify-center overflow-hidden'
 						onClick={() => setIsContextMenuOpen((prev) => !prev)}
 					>
 						<img
-							className='w-full h-full'
+							className='w-full h-full object-cover'
 							src={userAvatar ? userAvatar : Avatar}
 							alt='avatar'
 						/>
