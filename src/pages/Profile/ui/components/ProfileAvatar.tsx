@@ -11,7 +11,7 @@ export const ProfileAvatar = () => {
 	return (
 		<div className='relative w-[120px] h-[120px]'>
 			<img
-				className='rounded-full border-[2px] border-primary w-full h-full'
+				className='rounded-full border-[2px] border-primary w-full h-full object-cover'
 				src={userAvatar ? userAvatar : Avatar}
 				alt='Avatar'
 			/>
