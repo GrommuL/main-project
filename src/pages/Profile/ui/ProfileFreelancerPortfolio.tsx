@@ -15,7 +15,7 @@ export const ProfileFreelancerPortfolio = () => {
 						image={item.image}
 					/>
 				))}
-				<button className='p-[32px] flex flex-col items-center justify-center gap-[16px] w-[276px] h-[332px] border-[2px] border-dashed border-borderColor rounded-[16px] shadow-shadowShape'>
+				<button className='p-[32px] flex flex-col items-center justify-center gap-[16px] w-[276px] h-[332px] border-[2px] border-dashed border-borderColor rounded-[16px] shadow-shadowShape hover:border-primary transition'>
 					<div className='w-[44px] h-[44px] rounded-full bg-bgSecondary flex items-center justify-center'>
 						<PlusIcon />
 					</div>
