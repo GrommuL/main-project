@@ -14,7 +14,7 @@ export const ProfileUserAbout = () => {
 					Обо мне
 				</span>
 				<button
-					className='w-[44px] h-[44px] rounded-full bg-bgSecondary flex items-center justify-center'
+					className='w-[44px] h-[44px] rounded-full bg-bgSecondary flex items-center justify-center border border-transparent hover:border-primaryHover transition'
 					onClick={handleOpenModal}
 				>
 					<PencilIcon />
