@@ -9,7 +9,7 @@ export const instance = axios.create({
 })
 
 instance.interceptors.request.use((config): any => {
-	const accessToken = Cookies.get('accesToken')
+	const accessToken = Cookies.get('accessToken')
 
 	if (config.headers && accessToken) {
 		config.headers.Authorization = `Bearer ${accessToken}`
