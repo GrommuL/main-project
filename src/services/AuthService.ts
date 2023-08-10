@@ -1,4 +1,4 @@
-import { setUser } from '@/store/slices/authSlice'
+import { logoutUser, setUser } from '@/store/slices/authSlice'
 import { UserInfo } from '@/types/User'
 import { useAppDispatch } from '@/utils/hooks/redux'
 import Cookies from 'js-cookie'
@@ -12,6 +12,7 @@ export const AuthService = () => {
 
 	const removeTokenFromStorage = () => {
 		Cookies.remove('accessToken')
+		dispatch(logoutUser())
 	}
 
 	const saveToStorage = (data: UserInfo) => {
