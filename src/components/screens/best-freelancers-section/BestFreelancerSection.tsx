@@ -1,6 +1,5 @@
 import { useEffect } from 'react'
 import { BestFreelancerPortfolioItem } from './ui'
-import { instance } from '@/utils/axios/instance'
 import { useAppDispatch, useAppSelector } from '@/utils/hooks/redux'
 import { getFreelancers } from '@/store/slices/usersSlice'
 import axios, { AxiosResponse } from 'axios'
