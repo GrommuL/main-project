@@ -26,7 +26,7 @@ export const HeaderUserInformation = () => {
 	})
 	return (
 		<div className='flex items-center gap-[24px]'>
-			<HeaderLinkButton label='Мои заказы' href='/' />
+			<HeaderLinkButton label='Мои заказы' href='/orders' />
 			<div className='flex items-center gap-[32px]'>
 				<div className='flex items-center gap-[16px]'>
 					<Link to='/'>
