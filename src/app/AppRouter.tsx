@@ -1,6 +1,14 @@
 import { createBrowserRouter } from 'react-router-dom'
 import { Layout } from '@/components/layout'
-import { SignUp, Home, SignIn, NotFound, Profile, CreateTask } from '@/pages'
+import {
+	SignUp,
+	Home,
+	SignIn,
+	NotFound,
+	Profile,
+	CreateTask,
+	Orders
+} from '@/pages'
 import { AuthGuard } from '@/providers/AuthGuard'
 
 export const AppRouter = createBrowserRouter([
@@ -24,6 +32,14 @@ export const AppRouter = createBrowserRouter([
 				element: (
 					<AuthGuard>
 						<CreateTask />
+					</AuthGuard>
+				)
+			},
+			{
+				path: 'orders',
+				element: (
+					<AuthGuard>
+						<Orders />
 					</AuthGuard>
 				)
 			},
