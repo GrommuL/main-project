@@ -1,5 +1,4 @@
 import { LinkButton } from '@/components/ui/buttons'
-import { Tab } from '@/components/ui/tabs'
 import { useState } from 'react'
 import {
 	OrdersCategoriesTabs,
