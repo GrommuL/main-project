@@ -1,13 +1,19 @@
+import { Toggle } from '@/components/ui/Toggle'
 import { LinkButton } from '@/components/ui/buttons'
 import { SharedIcon, ViewIcon } from '@/components/ui/icons'
 import { Tab } from '@/components/ui/tabs'
 import { useState } from 'react'
 
 type TaskCategoryTabs = 'all-tasks' | 'agreed-terms' | 'in-work' | 'closed'
+type TaskInformationToggle = 'details' | 'responses'
 
 export const Orders = () => {
 	const [taskCategory, setTaskCategory] =
 		useState<TaskCategoryTabs>('all-tasks')
+
+	const [taskInformation, setTaskInformation] =
+		useState<TaskInformationToggle>('details')
+
 	return (
 		<main className='pt-[50px] pb-[100px]'>
 			<div className='container'>
@@ -70,7 +76,30 @@ export const Orders = () => {
 									</div>
 									<div>Создано 03 октября 2022</div>
 								</div>
-								<div></div>
+								<div className='flex items-center'>
+									<Toggle
+										id='details'
+										label='Детали задания'
+										onClick={() => setTaskInformation('details')}
+										value='details'
+										name='taskDetails'
+										variant='left'
+										defaultChecked
+									/>
+									<Toggle
+										id='responses'
+										label='Отклики'
+										name='taskDetails'
+										onClick={() => setTaskInformation('responses')}
+										value='responses'
+										variant='right'
+										className={
+											taskInformation === 'responses'
+												? 'bg-primary text-white'
+												: ''
+										}
+									/>
+								</div>
 							</div>
 						</div>
 					</div>
