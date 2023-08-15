@@ -17,7 +17,7 @@ export const Button: FC<ButtonProps> = ({
 	return (
 		<button
 			className={clsx(
-				'px-[20px] py-[12px] rounded-[12px] text-[16px] leading-[24px] w-full ',
+				'px-[20px] py-[12px] border border-transparent rounded-[12px] text-[16px] leading-[24px] w-full ',
 				{
 					primary:
 						'bg-primary text-white hover:bg-primaryHover active:bg-primaryPressed border border-primary transition',
