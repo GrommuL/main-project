@@ -50,10 +50,7 @@ export const TaskInformationBlock: FC<TaskInformationBlockProps> = ({
 					</p>
 				</div>
 			)}
-			<Button
-				label='Отменить заказ'
-				className='bg-error text-white w-fit border border-error hover:bg-red-700 transition'
-			/>
+			<Button label='Отменить заказ' variant='secondary' />
 		</div>
 	)
 }
