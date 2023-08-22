@@ -5,7 +5,7 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 	className?: string
 	label: string
 	onClick?: () => void
-	variant?: 'primary' | 'outline'
+	variant?: 'primary' | 'secondary' | 'outline'
 }
 
 export const Button: FC<ButtonProps> = ({
@@ -17,12 +17,14 @@ export const Button: FC<ButtonProps> = ({
 	return (
 		<button
 			className={clsx(
-				'px-[20px] py-[12px] border border-transparent rounded-[12px] text-[16px] leading-[24px] w-full ',
+				'px-[20px] py-[12px] border border-transparent rounded-[12px] text-[16px] leading-[24px] w-full',
 				{
 					primary:
 						'bg-primary text-white hover:bg-primaryHover active:bg-primaryPressed border border-primary transition',
 					outline:
-						'bg-white text-textPrimary hover:bg-primaryHover hover:text-white active:bg-primaryPressed active:text-white border border-borderColor transition'
+						'bg-white text-textPrimary hover:bg-primaryHover hover:text-white active:bg-primaryPressed active:text-white border border-borderColor transition',
+					secondary:
+						'text-white border border-error bg-error  hover:bg-red-700 transition w-max'
 				}[variant],
 				className
 			)}
