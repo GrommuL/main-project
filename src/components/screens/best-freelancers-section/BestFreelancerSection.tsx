@@ -1,25 +1,12 @@
 import { useEffect } from 'react'
 import { BestFreelancerPortfolioItem } from './ui'
-import { useAppDispatch, useAppSelector } from '@/utils/hooks/redux'
-import { getFreelancers } from '@/store/slices/usersSlice'
-import axios, { AxiosResponse } from 'axios'
-import { User } from '@/types/User'
+import { useAppSelector } from '@/utils/hooks/redux'
+import { UserService } from '@/services/UserService'
 
 export const BestFreelancerSection = () => {
-	const dispatch = useAppDispatch()
+	const { getAllUsers } = UserService()
 	const users = useAppSelector((state) => state.users.users)
-	const getAllUsers = async () => {
-		try {
-			const response: AxiosResponse<User[]> = await axios.get(
-				'http://localhost:8080/users'
-			)
-			if (response.data) {
-				dispatch(getFreelancers({ users: [...response.data] }))
-			}
-		} catch (error) {
-			console.log(error)
-		}
-	}
+
 	useEffect(() => {
 		void getAllUsers()
 	}, [])
