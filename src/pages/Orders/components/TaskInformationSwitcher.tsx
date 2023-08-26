@@ -1,6 +1,7 @@
 import { Toggle } from '@/components/ui/Toggle'
 import { Dispatch, FC, SetStateAction } from 'react'
-import { TaskInformationToggle } from '../Orders'
+
+export type TaskInformationToggle = 'details' | 'responses'
 
 type TaskInformationSwitcherProps = {
 	taskInformation: string
