@@ -9,6 +9,7 @@ export type Order = {
 	orderStatus: OrderStatus
 	responses: User[]
 	orderExecutor: User
+	orderOwner: User
 }
 
 export type OrderStatus = 'active' | 'closed' | 'in-work'
