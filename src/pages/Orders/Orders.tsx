@@ -1,11 +1,6 @@
 import { LinkButton } from '@/components/ui/buttons'
 import { useState } from 'react'
-import {
-	OrdersCategoriesTabs,
-	TaskInformation,
-	TaskInformationBlock,
-	TaskInformationSwitcher
-} from './components'
+import { Order, OrdersCategoriesTabs } from './components'
 
 export type TaskInformationToggle = 'details' | 'responses'
 
@@ -23,16 +18,10 @@ export const Orders = () => {
 					</div>
 					<div>
 						<OrdersCategoriesTabs />
-						<div className='p-[32px]'>
-							<div className='flex flex-col gap-[32px]'>
-								<TaskInformation />
-								<TaskInformationSwitcher
-									taskInformation={taskInformation}
-									setTaskInformation={setTaskInformation}
-								/>
-								<TaskInformationBlock taskInformation={taskInformation} />
-							</div>
-						</div>
+						<Order
+							taskInformation={taskInformation}
+							setTaskInformation={setTaskInformation}
+						/>
 					</div>
 				</div>
 			</div>
