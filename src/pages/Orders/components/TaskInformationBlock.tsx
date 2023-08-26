@@ -3,10 +3,18 @@ import { FC } from 'react'
 
 type TaskInformationBlockProps = {
 	taskInformation: string
+	orderId: string | number
+	orderCategory: string
+	orderPrice: string | number
+	orderAbout: string
 }
 
 export const TaskInformationBlock: FC<TaskInformationBlockProps> = ({
-	taskInformation
+	taskInformation,
+	orderCategory,
+	orderId,
+	orderPrice,
+	orderAbout
 }) => {
 	return (
 		<div className='flex items-end justify-between'>
@@ -16,25 +24,25 @@ export const TaskInformationBlock: FC<TaskInformationBlockProps> = ({
 						<h5 className='text-[20px] leading-[26px] font-semibold'>
 							Номер задания
 						</h5>
-						<p>12345678</p>
+						<p>{orderId}</p>
 					</div>
 					<div>
 						<h5 className='text-[20px] leading-[26px] font-semibold'>
 							Категория и подкатегория
 						</h5>
-						<p>Дизайн - Веб дизайн</p>
+						<p>{orderCategory}</p>
 					</div>
 					<div>
 						<h5 className='text-[20px] leading-[26px] font-semibold'>
 							Описание услуги
 						</h5>
-						<p>Сделать лендинг на Тильде для туроператора I LIKE TRAVEL</p>
+						<p>{orderAbout}</p>
 					</div>
 					<div>
 						<h5 className='text-[20px] leading-[26px] font-semibold'>
 							Какой бюджет
 						</h5>
-						<p>до 30 000 руб.</p>
+						<p>до {orderPrice} руб.</p>
 					</div>
 				</div>
 			)}
