@@ -1,13 +1,7 @@
 import { LinkButton } from '@/components/ui/buttons'
-import { useState } from 'react'
 import { Order, OrdersCategoriesTabs } from './components'
 
-export type TaskInformationToggle = 'details' | 'responses'
-
 export const Orders = () => {
-	const [taskInformation, setTaskInformation] =
-		useState<TaskInformationToggle>('details')
-
 	return (
 		<main className='pt-[50px] pb-[100px]'>
 			<div className='container'>
@@ -18,10 +12,8 @@ export const Orders = () => {
 					</div>
 					<div>
 						<OrdersCategoriesTabs />
-						<Order
-							taskInformation={taskInformation}
-							setTaskInformation={setTaskInformation}
-						/>
+						<Order />
+						<Order />
 					</div>
 				</div>
 			</div>
