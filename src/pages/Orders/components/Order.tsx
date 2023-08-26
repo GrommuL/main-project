@@ -1,30 +1,11 @@
-import { Dispatch, FC, SetStateAction } from 'react'
-import {
-	TaskInformation,
-	TaskInformationBlock,
-	TaskInformationSwitcher
-} from '.'
-import { TaskInformationToggle } from '../Orders'
+import { TaskInformation, TaskInformationBlock } from '.'
 
-type OrderProps = {
-	taskInformation: string
-	setTaskInformation: Dispatch<SetStateAction<TaskInformationToggle>>
-}
-
-export const Order: FC<OrderProps> = ({
-	taskInformation,
-	setTaskInformation
-}) => {
+export const Order = () => {
 	return (
 		<div className='p-[32px]'>
 			<div className='flex flex-col gap-[32px]'>
 				<TaskInformation orderTitle='Лендинг на Тильде' orderPrice='30 000' />
-				<TaskInformationSwitcher
-					taskInformation={taskInformation}
-					setTaskInformation={setTaskInformation}
-				/>
 				<TaskInformationBlock
-					taskInformation={taskInformation}
 					orderId={'12345678'}
 					orderCategory='Дизайн - Веб дизайн'
 					orderAbout='Сделать лендинг на Тильде для туроператора I LIKE TRAVEL'
