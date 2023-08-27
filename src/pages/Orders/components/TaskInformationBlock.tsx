@@ -27,7 +27,7 @@ export const TaskInformationBlock: FC<TaskInformationBlockProps> = ({
 				</div>
 				<div>
 					<h5 className='text-[20px] leading-[26px] font-semibold'>
-						Категория и подкатегория
+						Категория
 					</h5>
 					<p>{orderCategory}</p>
 				</div>
