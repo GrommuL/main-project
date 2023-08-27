@@ -3,7 +3,7 @@ import { FC } from 'react'
 
 type TaskInformationBlockProps = {
 	taskInformation?: string
-	orderId: string | number
+	orderId?: number
 	orderCategory: string
 	orderPrice: string | number
 	orderAbout: string
