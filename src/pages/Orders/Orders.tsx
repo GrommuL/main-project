@@ -3,9 +3,10 @@ import { OrderItem, OrdersCategoriesTabs } from './components'
 import { useAppSelector } from '@/utils/hooks/redux'
 import { useEffect } from 'react'
 import { OrderService } from '@/services/OrderService'
+import { Order } from '@/types/OrderType'
 
 export const Orders = () => {
-	const orderList = useAppSelector((state) => state.orders.orders)
+	const orderList: Order[] = useAppSelector((state) => state.orders.orders)
 	const { getAllOrder } = OrderService()
 
 	useEffect(() => {

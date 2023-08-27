@@ -7,10 +7,8 @@ import { categories } from '@/utils/constants'
 import Select from 'react-select'
 import clsx from 'clsx'
 import { useAppSelector } from '@/utils/hooks/redux'
-import { instance } from '@/utils/axios/instance'
 import { useOrderCreate } from '@/utils/hooks/useOrderCreate'
 import { Order } from '@/types/OrderType'
-import { User } from '@/types/User'
 import { useNavigate } from 'react-router-dom'
 
 enum TASK {
