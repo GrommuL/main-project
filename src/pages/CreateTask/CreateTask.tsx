@@ -3,7 +3,9 @@ import { TaskInput } from '@/components/ui/inputs'
 import { useState } from 'react'
 import { SubmitHandler, useForm } from 'react-hook-form'
 import { Task } from '@/types/Task'
+import Select from 'react-select'
 import clsx from 'clsx'
+import { categories } from '@/utils/constants'
 
 enum TASK {
 	TITLE = 0,
@@ -13,6 +15,7 @@ enum TASK {
 
 export const CreateTask = () => {
 	const [step, setStep] = useState(TASK.TITLE)
+	const [category, setCategory] = useState('')
 
 	const {
 		register,
@@ -60,7 +63,7 @@ export const CreateTask = () => {
 					/>
 				</div>
 				{step === TASK.TITLE && (
-					<>
+					<div className='w-full flex flex-col gap-[8px]'>
 						<h3 className='text-[25px] leading-[32px] font-semibold'>
 							Что нужно сделать?
 						</h3>
@@ -71,7 +74,19 @@ export const CreateTask = () => {
 							required
 							label='Название задания'
 						/>
-					</>
+						<div className='flex flex-col gap-[8px]'>
+							<h4 className='text-[18px] leading-[24px] text-textSecondary'>
+								Выберите категорию
+							</h4>
+							<Select
+								options={categories}
+								placeholder='Категория'
+								onChange={(selectedCategory) =>
+									selectedCategory && setCategory(selectedCategory.label)
+								}
+							/>
+						</div>
+					</div>
 				)}
 				{step === TASK.DESCRIPTION && (
 					<>
