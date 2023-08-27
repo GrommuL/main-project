@@ -1,63 +1,111 @@
 {
-	"users": [
-		{
-			"email": "johnsnow@netowork.ru",
-			"password": "$2a$10$Alg1NnFusx8EQqE5bKBnNuAhENM0tvpB86x6OZl6jAxW7PblhlGQ2",
-			"firstName": "John",
-			"lastName": "Snow",
-			"acceptTerms": true,
-			"accountRole": "freelancer",
-			"createdAt": 1691051521803,
-			"avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8NQTko5uaA1p2jcrvFWRXUmxfF_DZUgk3sH3DksPhvshBtRDH38othlmbD6Q1vXR86P0&usqp=CAU",
-			"about": "Стэк: Marvel, Miro, Figma, Principle. (использую также Sketch, Illustrator)",
-			"portfolio": [
-				{
-					"id": "1",
-					"label": "Создание изображений",
-					"image": "https://www.powertrafic.fr/wp-content/uploads/2023/04/image-ia-exemple.png"
-				},
-				{
-					"id": "2",
-					"label": "Создание изображений, логотипов, дизайна",
-					"image": "https://www.freecodecamp.org/news/content/images/size/w2000/2022/09/jonatan-pie-3l3RwQdHRHg-unsplash.jpg"
-				}
-			],
-			"id": 1,
-			"orders": []
-		},
-		{
-			"email": "sparrow@netowork.ru",
-			"password": "$2a$10$iyNVDrJCYrz0h2MG1nOQnewckVlVOQWq27GYviRNhSs3R08DeXgz6",
-			"firstName": "Jack",
-			"lastName": "Sparrow",
-			"acceptTerms": true,
-			"accountRole": "customer",
-			"createdAt": 1691214657308,
-			"avatar": "https://media.sproutsocial.com/uploads/2022/06/profile-picture.jpeg",
-			"about": "\t\t\tLorem ipsum dolor sit amet consectetur adipisicing elit. Quos earum rerum eveniet dolorem sed similique amet adipisci, sit autem dignissimos consequatur eos nobis tenetur consectetur nemo pariatur ipsum reiciendis facilis.\n\t\t\tAtque quis pariatur magnam reprehenderit vitae nobis facere, ab cupiditate itaque rem porro! Sequi ratione doloremque nulla soluta quis fuga optio vitae! Exercitationem repellendus sed doloremque, rem quaerat perferendis qui?\n\t\t\tNostrum exercitationem dolor amet est optio ex, harum, quidem distinctio hic nihil dolore consequatur officiis unde eum laboriosam iste excepturi, sed quibusdam! Distinctio, itaque. Itaque asperiores optio ullam odit sunt.\n\t\t\tPerspiciatis tempore aut neque, optio veniam incidunt. Debitis tempore cupiditate, recusandae minus quos impedit beatae qui quod, culpa possimus doloremque quae sed ex, perspiciatis vel dolor ullam eos iusto perferendis?\n\t\t\tNostrum atque officia a odio laboriosam corporis quia veniam laudantium id aliquam non sunt voluptatem at eaque ducimus, labore quisquam vero! Provident tenetur reprehenderit facilis magni, quia excepturi obcaecati commodi?\n\t\t\tQuisquam libero tempora est, fugiat enim minima incidunt provident qui ipsum vero eum laboriosam numquam quibusdam mollitia aliquam accusantium assumenda possimus voluptate! Culpa itaque cum quidem molestias, eius voluptatem asperiores?\n\t\t\tNecessitatibus quia facere repudiandae magni amet culpa tempora pariatur. Doloribus molestias nesciunt dolorum, cumque quaerat inventore reprehenderit aliquid eaque consequuntur illum repudiandae dicta! Magnam vitae omnis a, excepturi ipsa eum!\n\t\t\tQuae doloribus obcaecati odio facilis neque debitis cumque. Labore excepturi magnam id accusantium voluptatem dolore quibusdam nam, atque nulla ex sit. Soluta ducimus blanditiis impedit. Illo enim debitis odit adipisci.\n\t\t\tDistinctio magnam hic nam perspiciatis vitae, numquam inventore itaque. Quisquam aperiam nesciunt voluptatibus facilis? Cumque eaque quasi necessitatibus recusandae, beatae quibusdam vitae explicabo magnam velit ab eum quo sapiente iusto?\n\t\t\tNesciunt modi enim ab voluptatem, veniam sint eos consectetur. Illum pariatur obcaecati ea explicabo ab mollitia temporibus, iure quo cum, corporis, non laboriosam neque nobis quos ducimus minima at dolor.\t",
-			"portfolio": [],
-			"id": 2,
-			"orders": []
-		},
-		{
-			"email": "shelby@netowork.ru",
-			"password": "$2a$10$KlUzTX6Rotc4mJK8tmXSterevC2nESb8VfO7RkZrTHHk/jR1/HADa",
-			"firstName": "Thomas",
-			"lastName": "Shelby",
-			"acceptTerms": true,
-			"accountRole": "freelancer",
-			"createdAt": 1691650933701,
-			"avatar": "https://i.pinimg.com/originals/6e/18/0b/6e180b18de72884061c79cad0768b75a.jpg",
-			"about": "",
-			"portfolio": [
-				{
-					"id": "1",
-					"label": "Создание изображений, логотипов, дизайна",
-					"image": "https://www.freecodecamp.org/news/content/images/size/w2000/2022/09/jonatan-pie-3l3RwQdHRHg-unsplash.jpg"
-				}
-			],
-			"id": 3,
-			"orders": []
-		}
-	]
+  "users": [
+    {
+      "email": "johnsnow@netowork.ru",
+      "password": "$2a$10$Alg1NnFusx8EQqE5bKBnNuAhENM0tvpB86x6OZl6jAxW7PblhlGQ2",
+      "firstName": "John",
+      "lastName": "Snow",
+      "acceptTerms": true,
+      "accountRole": "freelancer",
+      "createdAt": 1691051521803,
+      "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8NQTko5uaA1p2jcrvFWRXUmxfF_DZUgk3sH3DksPhvshBtRDH38othlmbD6Q1vXR86P0&usqp=CAU",
+      "about": "Стэк: Marvel, Miro, Figma, Principle. (использую также Sketch, Illustrator)",
+      "portfolio": [
+        {
+          "id": "1",
+          "label": "Создание изображений",
+          "image": "https://www.powertrafic.fr/wp-content/uploads/2023/04/image-ia-exemple.png"
+        },
+        {
+          "id": "2",
+          "label": "Создание изображений, логотипов, дизайна",
+          "image": "https://www.freecodecamp.org/news/content/images/size/w2000/2022/09/jonatan-pie-3l3RwQdHRHg-unsplash.jpg"
+        }
+      ],
+      "id": 1,
+      "orders": []
+    },
+    {
+      "email": "sparrow@netowork.ru",
+      "password": "$2a$10$iyNVDrJCYrz0h2MG1nOQnewckVlVOQWq27GYviRNhSs3R08DeXgz6",
+      "firstName": "Jack",
+      "lastName": "Sparrow",
+      "acceptTerms": true,
+      "accountRole": "customer",
+      "createdAt": 1691214657308,
+      "avatar": "https://media.sproutsocial.com/uploads/2022/06/profile-picture.jpeg",
+      "about": "\t\t\tLorem ipsum dolor sit amet consectetur adipisicing elit. Quos earum rerum eveniet dolorem sed similique amet adipisci, sit autem dignissimos consequatur eos nobis tenetur consectetur nemo pariatur ipsum reiciendis facilis.\n\t\t\tAtque quis pariatur magnam reprehenderit vitae nobis facere, ab cupiditate itaque rem porro! Sequi ratione doloremque nulla soluta quis fuga optio vitae! Exercitationem repellendus sed doloremque, rem quaerat perferendis qui?\n\t\t\tNostrum exercitationem dolor amet est optio ex, harum, quidem distinctio hic nihil dolore consequatur officiis unde eum laboriosam iste excepturi, sed quibusdam! Distinctio, itaque. Itaque asperiores optio ullam odit sunt.\n\t\t\tPerspiciatis tempore aut neque, optio veniam incidunt. Debitis tempore cupiditate, recusandae minus quos impedit beatae qui quod, culpa possimus doloremque quae sed ex, perspiciatis vel dolor ullam eos iusto perferendis?\n\t\t\tNostrum atque officia a odio laboriosam corporis quia veniam laudantium id aliquam non sunt voluptatem at eaque ducimus, labore quisquam vero! Provident tenetur reprehenderit facilis magni, quia excepturi obcaecati commodi?\n\t\t\tQuisquam libero tempora est, fugiat enim minima incidunt provident qui ipsum vero eum laboriosam numquam quibusdam mollitia aliquam accusantium assumenda possimus voluptate! Culpa itaque cum quidem molestias, eius voluptatem asperiores?\n\t\t\tNecessitatibus quia facere repudiandae magni amet culpa tempora pariatur. Doloribus molestias nesciunt dolorum, cumque quaerat inventore reprehenderit aliquid eaque consequuntur illum repudiandae dicta! Magnam vitae omnis a, excepturi ipsa eum!\n\t\t\tQuae doloribus obcaecati odio facilis neque debitis cumque. Labore excepturi magnam id accusantium voluptatem dolore quibusdam nam, atque nulla ex sit. Soluta ducimus blanditiis impedit. Illo enim debitis odit adipisci.\n\t\t\tDistinctio magnam hic nam perspiciatis vitae, numquam inventore itaque. Quisquam aperiam nesciunt voluptatibus facilis? Cumque eaque quasi necessitatibus recusandae, beatae quibusdam vitae explicabo magnam velit ab eum quo sapiente iusto?\n\t\t\tNesciunt modi enim ab voluptatem, veniam sint eos consectetur. Illum pariatur obcaecati ea explicabo ab mollitia temporibus, iure quo cum, corporis, non laboriosam neque nobis quos ducimus minima at dolor.\t",
+      "portfolio": [],
+      "id": 2,
+      "orders": []
+    },
+    {
+      "email": "shelby@netowork.ru",
+      "password": "$2a$10$KlUzTX6Rotc4mJK8tmXSterevC2nESb8VfO7RkZrTHHk/jR1/HADa",
+      "firstName": "Thomas",
+      "lastName": "Shelby",
+      "acceptTerms": true,
+      "accountRole": "freelancer",
+      "createdAt": 1691650933701,
+      "avatar": "https://i.pinimg.com/originals/6e/18/0b/6e180b18de72884061c79cad0768b75a.jpg",
+      "about": "",
+      "portfolio": [
+        {
+          "id": "1",
+          "label": "Создание изображений, логотипов, дизайна",
+          "image": "https://www.freecodecamp.org/news/content/images/size/w2000/2022/09/jonatan-pie-3l3RwQdHRHg-unsplash.jpg"
+        }
+      ],
+      "id": 3,
+      "orders": []
+    }
+  ],
+  "tasks": [
+    {
+      "orderTitle": "Создать сайт",
+      "orderCategory": "Веб-разработка",
+      "orderPrice": "15000",
+      "orderAbout": "Создать сайт по макету",
+      "createdAt": 1693132796161,
+      "orderStatus": "active",
+      "responses": [],
+      "orderOwner": {
+        "email": "sparrow@netowork.ru",
+        "firstName": "Jack",
+        "lastName": "Sparrow",
+        "acceptTerms": true,
+        "accountRole": "customer",
+        "createdAt": 1691214657308,
+        "avatar": "https://media.sproutsocial.com/uploads/2022/06/profile-picture.jpeg",
+        "about": "\t\t\tLorem ipsum dolor sit amet consectetur adipisicing elit. Quos earum rerum eveniet dolorem sed similique amet adipisci, sit autem dignissimos consequatur eos nobis tenetur consectetur nemo pariatur ipsum reiciendis facilis.\n\t\t\tAtque quis pariatur magnam reprehenderit vitae nobis facere, ab cupiditate itaque rem porro! Sequi ratione doloremque nulla soluta quis fuga optio vitae! Exercitationem repellendus sed doloremque, rem quaerat perferendis qui?\n\t\t\tNostrum exercitationem dolor amet est optio ex, harum, quidem distinctio hic nihil dolore consequatur officiis unde eum laboriosam iste excepturi, sed quibusdam! Distinctio, itaque. Itaque asperiores optio ullam odit sunt.\n\t\t\tPerspiciatis tempore aut neque, optio veniam incidunt. Debitis tempore cupiditate, recusandae minus quos impedit beatae qui quod, culpa possimus doloremque quae sed ex, perspiciatis vel dolor ullam eos iusto perferendis?\n\t\t\tNostrum atque officia a odio laboriosam corporis quia veniam laudantium id aliquam non sunt voluptatem at eaque ducimus, labore quisquam vero! Provident tenetur reprehenderit facilis magni, quia excepturi obcaecati commodi?\n\t\t\tQuisquam libero tempora est, fugiat enim minima incidunt provident qui ipsum vero eum laboriosam numquam quibusdam mollitia aliquam accusantium assumenda possimus voluptate! Culpa itaque cum quidem molestias, eius voluptatem asperiores?\n\t\t\tNecessitatibus quia facere repudiandae magni amet culpa tempora pariatur. Doloribus molestias nesciunt dolorum, cumque quaerat inventore reprehenderit aliquid eaque consequuntur illum repudiandae dicta! Magnam vitae omnis a, excepturi ipsa eum!\n\t\t\tQuae doloribus obcaecati odio facilis neque debitis cumque. Labore excepturi magnam id accusantium voluptatem dolore quibusdam nam, atque nulla ex sit. Soluta ducimus blanditiis impedit. Illo enim debitis odit adipisci.\n\t\t\tDistinctio magnam hic nam perspiciatis vitae, numquam inventore itaque. Quisquam aperiam nesciunt voluptatibus facilis? Cumque eaque quasi necessitatibus recusandae, beatae quibusdam vitae explicabo magnam velit ab eum quo sapiente iusto?\n\t\t\tNesciunt modi enim ab voluptatem, veniam sint eos consectetur. Illum pariatur obcaecati ea explicabo ab mollitia temporibus, iure quo cum, corporis, non laboriosam neque nobis quos ducimus minima at dolor.\t",
+        "portfolio": [],
+        "id": 2,
+        "orders": []
+      },
+      "id": 1
+    },
+    {
+      "orderTitle": "Написать речь для сотрудников",
+      "orderCategory": "Письменные работы",
+      "orderPrice": "20000",
+      "orderAbout": "Написать поздравительную речь для сотрудников, которые уходят на пенсию",
+      "createdAt": 1693134716498,
+      "orderStatus": "active",
+      "responses": [],
+      "orderOwner": {
+        "email": "sparrow@netowork.ru",
+        "firstName": "Jack",
+        "lastName": "Sparrow",
+        "acceptTerms": true,
+        "accountRole": "customer",
+        "createdAt": 1691214657308,
+        "avatar": "https://media.sproutsocial.com/uploads/2022/06/profile-picture.jpeg",
+        "about": "\t\t\tLorem ipsum dolor sit amet consectetur adipisicing elit. Quos earum rerum eveniet dolorem sed similique amet adipisci, sit autem dignissimos consequatur eos nobis tenetur consectetur nemo pariatur ipsum reiciendis facilis.\n\t\t\tAtque quis pariatur magnam reprehenderit vitae nobis facere, ab cupiditate itaque rem porro! Sequi ratione doloremque nulla soluta quis fuga optio vitae! Exercitationem repellendus sed doloremque, rem quaerat perferendis qui?\n\t\t\tNostrum exercitationem dolor amet est optio ex, harum, quidem distinctio hic nihil dolore consequatur officiis unde eum laboriosam iste excepturi, sed quibusdam! Distinctio, itaque. Itaque asperiores optio ullam odit sunt.\n\t\t\tPerspiciatis tempore aut neque, optio veniam incidunt. Debitis tempore cupiditate, recusandae minus quos impedit beatae qui quod, culpa possimus doloremque quae sed ex, perspiciatis vel dolor ullam eos iusto perferendis?\n\t\t\tNostrum atque officia a odio laboriosam corporis quia veniam laudantium id aliquam non sunt voluptatem at eaque ducimus, labore quisquam vero! Provident tenetur reprehenderit facilis magni, quia excepturi obcaecati commodi?\n\t\t\tQuisquam libero tempora est, fugiat enim minima incidunt provident qui ipsum vero eum laboriosam numquam quibusdam mollitia aliquam accusantium assumenda possimus voluptate! Culpa itaque cum quidem molestias, eius voluptatem asperiores?\n\t\t\tNecessitatibus quia facere repudiandae magni amet culpa tempora pariatur. Doloribus molestias nesciunt dolorum, cumque quaerat inventore reprehenderit aliquid eaque consequuntur illum repudiandae dicta! Magnam vitae omnis a, excepturi ipsa eum!\n\t\t\tQuae doloribus obcaecati odio facilis neque debitis cumque. Labore excepturi magnam id accusantium voluptatem dolore quibusdam nam, atque nulla ex sit. Soluta ducimus blanditiis impedit. Illo enim debitis odit adipisci.\n\t\t\tDistinctio magnam hic nam perspiciatis vitae, numquam inventore itaque. Quisquam aperiam nesciunt voluptatibus facilis? Cumque eaque quasi necessitatibus recusandae, beatae quibusdam vitae explicabo magnam velit ab eum quo sapiente iusto?\n\t\t\tNesciunt modi enim ab voluptatem, veniam sint eos consectetur. Illum pariatur obcaecati ea explicabo ab mollitia temporibus, iure quo cum, corporis, non laboriosam neque nobis quos ducimus minima at dolor.\t",
+        "portfolio": [],
+        "id": 2,
+        "orders": []
+      },
+      "id": 2
+    }
+  ]
 }
