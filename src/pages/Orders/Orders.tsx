@@ -1,7 +1,16 @@
 import { LinkButton } from '@/components/ui/buttons'
-import { Order, OrdersCategoriesTabs } from './components'
+import { OrderItem, OrdersCategoriesTabs } from './components'
+import { useAppSelector } from '@/utils/hooks/redux'
+import { useEffect } from 'react'
+import { OrderService } from '@/services/OrderService'
 
 export const Orders = () => {
+	const orderList = useAppSelector((state) => state.orders.orders)
+	const { getAllOrder } = OrderService()
+
+	useEffect(() => {
+		void getAllOrder()
+	}, [])
 	return (
 		<main className='pt-[50px] pb-[100px]'>
 			<div className='container'>
@@ -12,8 +21,9 @@ export const Orders = () => {
 					</div>
 					<div>
 						<OrdersCategoriesTabs />
-						<Order />
-						<Order />
+						{orderList.map((order) => (
+							<OrderItem key={order.id} order={order} />
+						))}
 					</div>
 				</div>
 			</div>
