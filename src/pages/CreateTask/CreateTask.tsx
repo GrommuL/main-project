@@ -3,9 +3,15 @@ import { TaskInput } from '@/components/ui/inputs'
 import { useState } from 'react'
 import { SubmitHandler, useForm } from 'react-hook-form'
 import { Task } from '@/types/Task'
+import { categories } from '@/utils/constants'
 import Select from 'react-select'
 import clsx from 'clsx'
-import { categories } from '@/utils/constants'
+import { useAppSelector } from '@/utils/hooks/redux'
+import { instance } from '@/utils/axios/instance'
+import { useOrderCreate } from '@/utils/hooks/useOrderCreate'
+import { Order } from '@/types/OrderType'
+import { User } from '@/types/User'
+import { useNavigate } from 'react-router-dom'
 
 enum TASK {
 	TITLE = 0,
@@ -14,8 +20,12 @@ enum TASK {
 }
 
 export const CreateTask = () => {
+	const user = useAppSelector((state) => state.auth.user)
 	const [step, setStep] = useState(TASK.TITLE)
 	const [category, setCategory] = useState('')
+	const { orderCreate } = useOrderCreate()
+	const today = Date.now()
+	const navigate = useNavigate()
 
 	const {
 		register,
@@ -30,9 +40,20 @@ export const CreateTask = () => {
 		setStep((value) => value - 1)
 	}
 
-	const onSubmit: SubmitHandler<Task> = (data) => {
+	const onSubmit: SubmitHandler<Task> = async (data) => {
 		if (step === TASK.PRICE) {
-			console.log(data)
+			const order: Order = {
+				orderTitle: data.taskName,
+				orderCategory: category,
+				orderPrice: data.price,
+				orderAbout: data.taskInformation,
+				createdAt: today,
+				orderStatus: 'active',
+				responses: [],
+				orderOwner: user
+			}
+			const response = await orderCreate(order)
+			navigate('/orders')
 		}
 	}
 
