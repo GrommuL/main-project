@@ -28,6 +28,13 @@ export const Orders = () => {
 						{ownerOrderList.map((order) => (
 							<OrderItem key={order.id} order={order} />
 						))}
+						{!ownerOrderList.length && (
+							<div className='flex justify-center items-center flex-col gap-[16px] pt-[30px]'>
+								<h5 className='text-[20px] leading-[26px] font-semibold'>
+									У задания пока нет заданий
+								</h5>
+							</div>
+						)}
 					</div>
 				</div>
 			</div>
