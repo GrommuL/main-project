@@ -1,4 +1,4 @@
-import { Order, Orders } from '@/types/OrderType'
+import { Orders } from '@/types/OrderType'
 import { PayloadAction, createSlice } from '@reduxjs/toolkit'
 
 const initialState: Orders = {
