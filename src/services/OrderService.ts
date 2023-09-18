@@ -1,5 +1,5 @@
 import { getOrders } from '@/store/slices/ordersSlice'
-import { Order, Orders } from '@/types/OrderType'
+import { Order } from '@/types/OrderType'
 import { instance } from '@/utils/axios/instance'
 import { useAppDispatch } from '@/utils/hooks/redux'
 import { AxiosResponse } from 'axios'
