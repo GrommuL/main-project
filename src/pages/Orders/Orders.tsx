@@ -3,11 +3,14 @@ import { OrderItem, OrdersCategoriesTabs } from './components'
 import { useAppSelector } from '@/utils/hooks/redux'
 import { useEffect } from 'react'
 import { OrderService } from '@/services/OrderService'
-import { Order } from '@/types/OrderType'
 
 export const Orders = () => {
-	const orderList: Order[] = useAppSelector((state) => state.orders.orders)
+	const orderList = useAppSelector((state) => state.orders.orders)
+	const user = useAppSelector((state) => state.auth.user)
 	const { getAllOrder } = OrderService()
+	const ownerOrderList = orderList.filter(
+		(order) => order.orderOwner?.id === user?.id
+	)
 
 	useEffect(() => {
 		void getAllOrder()
@@ -22,7 +25,7 @@ export const Orders = () => {
 					</div>
 					<div>
 						<OrdersCategoriesTabs />
-						{orderList.map((order) => (
+						{ownerOrderList.map((order) => (
 							<OrderItem key={order.id} order={order} />
 						))}
 					</div>
