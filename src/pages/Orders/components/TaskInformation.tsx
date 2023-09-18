@@ -1,4 +1,4 @@
-import { SharedIcon } from '@/components/ui/icons'
+import { PencilIcon } from '@/components/ui/icons'
 import { FC } from 'react'
 
 type TaskInformationProps = {
@@ -21,7 +21,7 @@ export const TaskInformation: FC<TaskInformationProps> = ({
 							console.log('click')
 						}}
 					>
-						<SharedIcon />
+						<PencilIcon />
 					</button>
 				</div>
 				<span className='text-[32px] leading-[45px]'>до {orderPrice} руб.</span>
