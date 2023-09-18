@@ -1,4 +1,7 @@
 import { Button } from '@/components/ui/buttons'
+import { OrderService } from '@/services/OrderService'
+import { useAppSelector } from '@/utils/hooks/redux'
+import axios from 'axios'
 import { FC } from 'react'
 
 type TaskInformationBlockProps = {
@@ -16,6 +19,16 @@ export const TaskInformationBlock: FC<TaskInformationBlockProps> = ({
 	orderPrice,
 	orderAbout
 }) => {
+	const tasks = useAppSelector((state) => state.orders.orders)
+	const { getAllOrder } = OrderService()
+	console.log(tasks)
+	const handleOrderDelete = async (id?: number) => {
+		if (id) {
+			await axios.delete(`http://localhost:8080/tasks/${id}`)
+			await getAllOrder()
+		}
+	}
+
 	return (
 		<div className='flex items-end justify-between'>
 			<div className='flex flex-col gap-[16px]'>
@@ -56,7 +69,11 @@ export const TaskInformationBlock: FC<TaskInformationBlockProps> = ({
 					</p>
 				</div>
 			)} */}
-			<Button label='Отменить заказ' variant='secondary' />
+			<Button
+				label='Отменить заказ'
+				variant='secondary'
+				onClick={() => handleOrderDelete(orderId)}
+			/>
 		</div>
 	)
 }
