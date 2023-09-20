@@ -10,6 +10,7 @@ import {
 	Orders
 } from '@/pages'
 import { AuthGuard } from '@/providers/AuthGuard'
+import { TasksCatalog } from '@/pages/TasksCatalog'
 
 export const AppRouter = createBrowserRouter([
 	{
@@ -40,6 +41,14 @@ export const AppRouter = createBrowserRouter([
 				element: (
 					<AuthGuard>
 						<Orders />
+					</AuthGuard>
+				)
+			},
+			{
+				path: 'catalog',
+				element: (
+					<AuthGuard>
+						<TasksCatalog />
 					</AuthGuard>
 				)
 			},
