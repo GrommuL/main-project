@@ -58,17 +58,17 @@ export const TaskInformationBlock: FC<TaskInformationBlockProps> = ({
 				</div>
 			</div>
 			{/* {taskInformation === 'responses' && (
-				<div className='flex flex-col gap-[16px]'>
-					<h5 className='text-[20px] leading-[26px] font-semibold'>
-						У задания пока нет откликов
-					</h5>
-					<p className='text-textSecondary max-w-[578px]'>
-						Скоро здесь появятся отклики исполнителей, готовых выполнить ваше
-						задание. Это может занять время. Дождитесь, пока исполнители увидят
-						задание и откликнутся на него
-					</p>
-				</div>
-			)} */}
+        <div className='flex flex-col gap-[16px]'>
+          <h5 className='text-[20px] leading-[26px] font-semibold'>
+            У задания пока нет откликов
+          </h5>
+          <p className='text-textSecondary max-w-[578px]'>
+            Скоро здесь появятся отклики исполнителей, готовых выполнить ваше
+            задание. Это может занять время. Дождитесь, пока исполнители увидят
+            задание и откликнутся на него
+          </p>
+        </div>
+      )} */}
 			<Button
 				label='Отменить заказ'
 				variant='secondary'
