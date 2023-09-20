@@ -6,7 +6,7 @@ export const FreelancerSearch = () => {
 			<div className='w-[75%] px-[28px] py-[16px]  border border-primary rounded-s-[12px] flex items-center gap-[4px]'>
 				<SearchIcon />
 				<input
-					className='w-full text-[16px] leading-[130%] outline-none'
+					className='w-full text-[16px] leading-[130%] outline-none bg-transparent'
 					type='text'
 				/>
 			</div>
